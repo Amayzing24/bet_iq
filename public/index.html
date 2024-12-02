@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetIQ - Sports Betting Predictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            overflow: auto;
+        }
+        .column h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+        }
+        .game-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background: #fefefe;
+            transition: transform 0.2s ease;
+        }
+        .game-box:hover {
+            transform: scale(1.02);
+            background: #f1f1f1;
+        }
+        .game-box p {
+            margin: 5px 0;
+        }
+        .news-box {
+            margin-bottom: 10px;
+        }
+        .news-box h4 {
+            margin: 0 0 5px;
+            font-size: 1rem;
+        }
+        .news-box p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .prediction {
+            margin-left: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function goToGameDetails(gameId) {
+            // Redirect to a game-specific details page
+            window.location.href = `game_details.html?gameId=${gameId}`;
+        }
+
+        function goToTodaysDetails(gameId) {
+            // Redirect to a game-specific details page
+            window.location.href = `todays_details.html?gameId=${gameId}`;
+        }
+    </script>
+</head>
+<body>
+    <br/>
+    <div class="title">BetIQ</div>
+    <div class="container">
+
+        <!-- Column 1: Yesterday's Games -->
+        <div class="column">
+            <h2>Yesterday's Games</h2>
+            <div class="game-box" onclick="goToGameDetails('lakers-warriors')">
+                <p><strong>Game:</strong> Lakers vs Warriors</p>
+                <p><strong>Final Score:</strong> 110 - 102</p>
+                <p><strong>Moneyline Odds:</strong> Lakers -150, Warriors +120</p>
+                <p><strong>Over/Under:</strong> 210.5 (Over)</p>
+                <p><strong>Spread:</strong> Lakers -5.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Lakers (<span class="correct">Correct</span>)</p>
+                    <p>Over/Under: Over (<span class="correct">Correct</span>)</p>
+                    <p>Spread: Lakers -5.5 (<span class="incorrect">Incorrect</span>)</p>
+                </div>
+            </div>
+            <div class="game-box" onclick="goToGameDetails('nets-celtics')">
+                <p><strong>Game:</strong> Nets vs Celtics</p>
+                <p><strong>Final Score:</strong> 98 - 115</p>
+                <p><strong>Moneyline Odds:</strong> Nets +200, Celtics -250</p>
+                <p><strong>Over/Under:</strong> 220.5 (Under)</p>
+                <p><strong>Spread:</strong> Celtics -7.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Celtics (<span class="correct">Correct</span>)</p>
+                    <p>Over/Under: Under (<span class="correct">Correct</span>)</p>
+                    <p>Spread: Celtics -7.5 (<span class="correct">Correct</span>)</p>
+                </div>
+            </div>
+            <div class="game-box" onclick="goToGameDetails('heat-pacers')">
+                <p><strong>Game:</strong> Heat vs Pacers</p>
+                <p><strong>Final Score:</strong> 104 - 99</p>
+                <p><strong>Moneyline Odds:</strong> Heat -120, Pacers +110</p>
+                <p><strong>Over/Under:</strong> 212.5 (Under)</p>
+                <p><strong>Spread:</strong> Heat -2.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Heat (<span class="correct">Correct</span>)</p>
+                    <p>Over/Under: Under (<span class="correct">Correct</span>)</p>
+                    <p>Spread: Heat -2.5 (<span class="correct">Correct</span>)</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToGameDetails('jazz-thunder')">
+                <p><strong>Game:</strong> Jazz vs Thunder</p>
+                <p><strong>Final Score:</strong> 95 - 100</p>
+                <p><strong>Moneyline Odds:</strong> Jazz +110, Thunder -130</p>
+                <p><strong>Over/Under:</strong> 205.5 (Over)</p>
+                <p><strong>Spread:</strong> Thunder -3</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Thunder (<span class="correct">Correct</span>)</p>
+                    <p>Over/Under: Over (<span class="correct">Correct</span>)</p>
+                    <p>Spread: Thunder -3 (<span class="correct">Correct</span>)</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToGameDetails('mavericks-grizzlies')">
+                <p><strong>Game:</strong> Mavericks vs Grizzlies</p>
+                <p><strong>Final Score:</strong> 120 - 115</p>
+                <p><strong>Moneyline Odds:</strong> Mavericks -110, Grizzlies -110</p>
+                <p><strong>Over/Under:</strong> 215.5 (Over)</p>
+                <p><strong>Spread:</strong> Mavericks -1.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Grizzlies (<span class="incorrect">Incorrect</span>)</p>
+                    <p>Over/Under: Over (<span class="correct">Correct</span>)</p>
+                    <p>Spread: Grizzlies +1.5 (<span class="incorrect">Incorrect</span>)</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Column 2: Today's Games -->
+        <div class="column">
+            <h2>Today's Games</h2>
+            <div class="game-box" onclick="goToTodaysDetails('heat-bucks')">
+                <p><strong>Game:</strong> Heat vs Bucks</p>
+                <p><strong>Moneyline Odds:</strong> Heat +150, Bucks -180</p>
+                <p><strong>Over/Under:</strong> 215.5</p>
+                <p><strong>Spread:</strong> Bucks -3.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Bucks</p>
+                    <p>Over/Under: Over</p>
+                    <p>Spread: Bucks -3.5</p>
+                </div>
+            </div>
+            <div class="game-box" onclick="goToTodaysDetails('suns-clippers')">
+                <p><strong>Game:</strong> Suns vs Clippers</p>
+                <p><strong>Moneyline Odds:</strong> Suns -120, Clippers +110</p>
+                <p><strong>Over/Under:</strong> 222.5</p>
+                <p><strong>Spread:</strong> Suns -2.5</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Suns</p>
+                    <p>Over/Under: Under</p>
+                    <p>Spread: Suns -2.5</p>
+                </div>
+            </div>
+            <div class="game-box" onclick="goToTodaysDetails('raptors-pelicans')">
+                <p><strong>Game:</strong> Raptors vs Pelicans</p>
+                <p><strong>Moneyline Odds:</strong> Raptors +130, Pelicans -150</p>
+                <p><strong>Over/Under:</strong> 217.5</p>
+                <p><strong>Spread:</strong> Pelicans -4</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Pelicans</p>
+                    <p>Over/Under: Under</p>
+                    <p>Spread: Pelicans -4</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('hawks-knicks')">
+                <p><strong>Game:</strong> Hawks vs Knicks</p>
+                <p><strong>Moneyline Odds:</strong> Hawks -110, Knicks -110</p>
+                <p><strong>Over/Under:</strong> 209.5</p>
+                <p><strong>Spread:</strong> Knicks -1</p>
+                <div class="prediction">
+                    <p><strong>Predictions:</strong></p>
+                    <p>Moneyline: Hawks</p>
+                    <p>Over/Under: Over</p>
+                    <p>Spread: Hawks +1</p>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Column 3: NBA News -->
+        <div class="column">
+            <h2>NBA News</h2>
+            <div class="news-box">
+                <h4>Giannis Antetokounmpo Out Due to Injury</h4>
+                <p>The Bucks star will miss today's game against the Heat due to a sprained ankle.</p>
+            </div>
+            <div class="news-box">
+                <h4>Polymarket Odds Shift for MVP</h4>
+                <p>Joel Embiid's odds to win MVP surged to +250, overtaking Nikola Jokic.</p>
+            </div>
+            <div class="news-box">
+                <h4>LeBron James Reaches Milestone</h4>
+                <p>LeBron James becomes the first player in NBA history to score 40,000 career points.</p>
+            </div>
+            <div class="news-box">
+                <h4>Trade Rumors Around Damian Lillard</h4>
+                <p>Sources say Damian Lillard might request a trade to a contender this offseason.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 BetIQ - Sports Betting Predictions. All rights reserved.
+    </div>
+</body>
+</html>

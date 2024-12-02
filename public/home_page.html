@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Betting Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .box {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .box:hover {
+            background-color: #f0f0f0;
+        }
+
+        .box p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.fill-div {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Yesterday's Games -->
+        <div class="column">
+            <h2>Yesterday's Games</h2>
+            <div class="box">
+                <a href="game-details.html" class="fill-div"></a>
+                <p><strong>Game:</strong> Lakers vs. Warriors</p>
+                <p><strong>Final Score:</strong> 105 - 98</p>
+                <p><strong>Moneyline Odds:</strong> Lakers -200</p>
+                <p><strong>Spread:</strong> Lakers -5</p>
+                <p><strong>O/U:</strong> 210 (Under)</p>
+                <p><strong>Predicted:</strong> Lakers win, Cover Spread, Under</p>
+                <p><strong>Result:</strong> 3/3 Correct</p>
+            </div>
+            <div class="box">
+                <p><strong>Game:</strong> Nets vs. Bulls</p>
+                <p><strong>Final Score:</strong> 112 - 118</p>
+                <p><strong>Moneyline Odds:</strong> Bulls -150</p>
+                <p><strong>Spread:</strong> Bulls -3</p>
+                <p><strong>O/U:</strong> 230 (Over)</p>
+                <p><strong>Predicted:</strong> Bulls win, Cover Spread, Over</p>
+                <p><strong>Result:</strong> 2/3 Correct</p>
+            </div>
+        </div>
+
+        <!-- Today's Games -->
+        <div class="column">
+            <h2>Today's Games</h2>
+            <div class="box">
+                <a href="game-details.html" class="fill-div"></a>
+                <p><strong>Game:</strong> Heat vs. Celtics</p>
+                <p><strong>Moneyline Odds:</strong> Celtics -120</p>
+                <p><strong>Spread:</strong> Celtics -2</p>
+                <p><strong>O/U:</strong> 220</p>
+                <p><strong>Predicted:</strong> Celtics win, Cover Spread, Over</p>
+            </div>
+            <div class="box">
+                <a href="game-details.html" class="fill-div"></a>
+                <p><strong>Game:</strong> Suns vs. Clippers</p>
+                <p><strong>Moneyline Odds:</strong> Suns -110</p>
+                <p><strong>Spread:</strong> Suns -1.5</p>
+                <p><strong>O/U:</strong> 215</p>
+                <p><strong>Predicted:</strong> Suns win, Cover Spread, Under</p>
+            </div>
+        </div>
+
+        <!-- NBA News -->
+        <div class="column">
+            <h2>NBA News</h2>
+            <div class="box">
+                <p><strong>Headline:</strong> LeBron James listed as questionable for next game.</p>
+                <p><strong>Source:</strong> ESPN</p>
+            </div>
+            <div class="box">
+                <p><strong>Headline:</strong> Polymarket odds shift in favor of Celtics after injury updates.</p>
+                <p><strong>Source:</strong> NBA Tracker</p>
+            </div>
+            <div class="box">
+                <p><strong>Headline:</strong> Kevin Durant scores 50 in a dominant performance.</p>
+                <p><strong>Source:</strong> Bleacher Report</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
