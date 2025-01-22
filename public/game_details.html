@@ -4,201 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Details - BetIQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(to bottom, #1a1a1a, #333333);
+            color: #ffffff;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 30px auto;
+            background: #222222;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         .header {
             text-align: center;
+            margin-bottom: 20px;
         }
         .header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            color: #ffffff; /* Changed to white */
         }
         .header p {
             margin: 5px 0;
             font-size: 1.2rem;
-            color: #666;
+            color: #bbbbbb;
         }
         .section {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff; /* Changed to white */
         }
         .odds {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             text-align: center;
         }
         .odds div {
             flex: 1;
+            margin: 0 10px;
         }
         .number-line {
             position: relative;
             height: 40px;
-            background: #f1f1f1;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px 0;
+            background: #444444;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow: hidden;
         }
         .line-label {
             position: absolute;
             top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 0.9rem;
+            color: #ffffff;
+        }
+        .line {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 10px;
+            width: 4px;
+            border-radius: 2px;
         }
         .bookmaker-line {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 10px;
-            width: 2px;
-            background: red;
+            background: #ff4444;
         }
         .model-line {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 10px;
-            width: 2px;
-            background: blue;
+            background: #44aaff;
         }
         .outcome-line {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 10px;
-            width: 2px;
-            background: green;
+            background: #66ff66;
         }
         .legend {
             display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
+            justify-content: space-between;
+            margin-top: 15px;
             font-size: 0.9rem;
         }
         .legend div {
             display: flex;
             align-items: center;
-            gap: 5px;
         }
         .legend .color-box {
             width: 15px;
             height: 15px;
+            margin-right: 5px;
             border-radius: 3px;
-        }
-        .color-bookmaker {
-            background: red;
-        }
-        .color-model {
-            background: blue;
-        }
-        .color-outcome {
-            background: green;
         }
         .moneyline {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            gap: 15px;
         }
         .team {
-            text-align: center;
+            background: #333333;
+            border-radius: 8px;
+            padding: 15px;
             flex: 1;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
         .team h3 {
+            font-size: 1.5rem;
             margin: 5px 0;
-            font-size: 1.2rem;
         }
         .team p {
-            margin: 5px 0;
             font-size: 1rem;
+            margin: 5px 0;
         }
         .highlight {
-            color: green;
+            color: #66ff66;
             font-weight: bold;
         }
         .red-highlight {
-            color: red;
+            color: #ff4444;
             font-weight: bold;
         }
         .stats-table {
             width: 100%;
             margin-top: 20px;
             border-collapse: collapse;
-            font-size: 0.9rem;
+            background: #333333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
         }
         .stats-table th, .stats-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: center;
         }
         .stats-table th {
-            background-color: #f1f1f1;
-            font-weight: bold;
+            background: #444444;
+            color: #ffffff; /* Changed to white */
+        }
+        .stats-table td {
+            color: #ffffff;
         }
         .footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 0.9rem;
-            color: #666;
+            color: #888888;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header: Score and Team Names -->
         <div class="header">
             <h1>Lakers vs Warriors</h1>
             <p>Final Score: Lakers 110 - 102 Warriors</p>
         </div>
 
-        <!-- Odds and Predictions -->
         <div class="section">
             <h2>Spread and OU</h2>
             <div class="odds">
                 <div>
                     <p><strong>Spread:</strong> Lakers -5.5</p>
                     <div class="number-line">
-                        <div class="line-label" style="left: 50%;">0</div>
-                        <div class="bookmaker-line" style="left: 23%;"></div>
-                        <div class="model-line" style="left: 25%;"></div>
-                        <div class="outcome-line" style="left: 10%;"></div>
+                        <div class="line-label">0</div>
+                        <div class="line bookmaker-line" style="left: 20%;"></div>
+                        <div class="line model-line" style="left: 25%;"></div>
+                        <div class="line outcome-line" style="left: 15%;"></div>
                     </div>
                     <p>Model Prediction: Lakers -5 (<span class="red-highlight">Incorrect</span>)</p>
                 </div>
                 <div>
                     <p><strong>Over/Under:</strong> 210.5</p>
                     <div class="number-line">
-                        <div class="line-label" style="left: 45%;">210.5</div>
-                        <div class="bookmaker-line" style="left: 50%;"></div>
-                        <div class="model-line" style="left: 75%;"></div>
-                        <div class="outcome-line" style="left: 90%;"></div>
+                        <div class="line-label">210.5</div>
+                        <div class="line bookmaker-line" style="left: 40%;"></div>
+                        <div class="line model-line" style="left: 70%;"></div>
+                        <div class="line outcome-line" style="left: 80%;"></div>
                     </div>
                     <p>Model Prediction: 215 (<span class="highlight">Correct</span>)</p>
                 </div>
             </div>
-            <!-- Legend -->
             <div class="legend">
-                <div><div class="color-box color-bookmaker"></div> Bookmaker Line</div>
-                <div><div class="color-box color-model"></div> Model Prediction</div>
-                <div><div class="color-box color-outcome"></div> Actual Outcome</div>
+                <div><div class="color-box bookmaker-line"></div> Bookmaker Line</div>
+                <div><div class="color-box model-line"></div> Model Prediction</div>
+                <div><div class="color-box outcome-line"></div> Actual Outcome</div>
             </div>
         </div>
 
-        <!-- Moneyline Analysis -->
         <div class="section">
             <h2>Moneyline</h2>
             <div class="moneyline">
@@ -216,7 +215,6 @@
             </div>
         </div>
 
-        <!-- Team Stats Table -->
         <div class="section">
             <h2>Team Stats</h2>
             <table class="stats-table">
@@ -230,24 +228,8 @@
                 <tbody>
                     <tr><td>Wins</td><td>50</td><td>45</td></tr>
                     <tr><td>Losses</td><td>32</td><td>37</td></tr>
-                    <tr><td>FGM</td><td>40</td><td>38</td></tr>
-                    <tr><td>FGA</td><td>80</td><td>82</td></tr>
                     <tr><td>FG%</td><td>50%</td><td>46%</td></tr>
-                    <tr><td>3PM</td><td>12</td><td>14</td></tr>
-                    <tr><td>3PA</td><td>32</td><td>36</td></tr>
                     <tr><td>3P%</td><td>37.5%</td><td>38.9%</td></tr>
-                    <tr><td>FTM</td><td>18</td><td>12</td></tr>
-                    <tr><td>FTA</td><td>20</td><td>16</td></tr>
-                    <tr><td>FT%</td><td>90%</td><td>75%</td></tr>
-                    <tr><td>OREB</td><td>10</td><td>8</td></tr>
-                    <tr><td>DREB</td><td>30</td><td>28</td></tr>
-                    <tr><td>REB</td><td>40</td><td>36</td></tr>
-                    <tr><td>AST</td><td>25</td><td>20</td></tr>
-                    <tr><td>STL</td><td>8</td><td>6</td></tr>
-                    <tr><td>BLK</td><td>5</td><td>4</td></tr>
-                    <tr><td>TOV</td><td>12</td><td>14</td></tr>
-                    <tr><td>PF</td><td>18</td><td>20</td></tr>
-                    <tr><td>PTS</td><td>110</td><td>102</td></tr>
                 </tbody>
             </table>
         </div>
