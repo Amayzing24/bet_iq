@@ -91,18 +91,97 @@
         .chart-container {
             margin-top: 20px;
         }
-        .team-lakers {
-            color: #FDB927; /* Lakers Yellow */
-        }
-        .team-warriors {
-            color: #FDBA21; /* Warriors Yellow */
-        }
-        .team-heat {
-            color: #FF7F50; /* Heat Coral */
-        }
-        .team-bucks {
-            color: #A3D17D; /* Bucks Light Green */
-        }
+    .team-lakers {
+        color: #FDB927; /* Lakers Yellow */
+    }
+    .team-warriors {
+        color: #FDBA21; /* Warriors Yellow */
+    }
+    .team-heat {
+        color: #FF7F50; /* Heat Coral */
+    }
+    .team-bucks {
+        color: #A3D17D; /* Bucks Light Green */
+    }
+    .team-celtics {
+        color: #007A33; /* Celtics Green */
+    }
+    .team-bulls {
+        color: #CE1141; /* Bulls Red */
+    }
+    .team-knicks {
+        color: #F58426; /* Knicks Orange */
+    }
+    .team-nets {
+        color: #FFFFFF; /* Nets White */
+    }
+    .team-76ers {
+        color: #006BB6; /* 76ers Blue */
+    }
+    .team-raptors {
+        color: #CE1141; /* Raptors Red */
+    }
+    .team-cavaliers {
+        color: #6F263D; /* Cavaliers Wine */
+    }
+    .team-pacers {
+        color: #FFC633; /* Pacers Yellow */
+    }
+    .team-pistons {
+        color: #C8102E; /* Pistons Red */
+    }
+    .team-hawks {
+        color: #E03A3E; /* Hawks Red */
+    }
+    .team-hornets {
+        color: #1D1160; /* Hornets Purple */
+    }
+    .team-magic {
+        color: #0077C0; /* Magic Blue */
+    }
+    .team-wizards {
+        color: #002B5C; /* Wizards Navy */
+    }
+    .team-suns {
+        color: #E56020; /* Suns Orange */
+    }
+    .team-clippers {
+        color: #C8102E; /* Clippers Red */
+    }
+    .team-kings {
+        color: #5A2D81; /* Kings Purple */
+    }
+    .team-mavericks {
+        color: #00538C; /* Mavericks Blue */
+    }
+    .team-rockets {
+        color: #CE1141; /* Rockets Red */
+    }
+    .team-grizzlies {
+        color: #5D76A9; /* Grizzlies Blue */
+    }
+    .team-pelicans {
+        color: #002B5C; /* Pelicans Navy */
+    }
+    .team-spurs {
+        color: #C4CED4; /* Spurs Silver */
+    }
+    .team-timberwolves {
+        color: #236192; /* Timberwolves Blue */
+    }
+    .team-thunder {
+        color: #007AC1; /* Thunder Blue */
+    }
+    .team-jazz {
+        color: #002B5C; /* Jazz Navy */
+    }
+    .team-trail-blazers {
+        color: #E03A3E; /* Blazers Red */
+    }
+    .team-nuggets {
+        color: #FDB927; /* Nuggets Yellow */
+    }
+
         .info-text {
             text-align: center;
             font-size: 1rem;
@@ -164,6 +243,13 @@
     color: #00bfff; /* Change the color on hover to make it more interactive */
 }
 
+.correct {
+    color: #28A745; /* Green suitable for dark backgrounds */
+}
+
+.incorrect {
+    color: #DC3545; /* Red suitable for dark backgrounds */
+}
 
     </style>
 </head>
@@ -194,43 +280,218 @@
         <!-- Column 1: Yesterday's Games -->
         <div class="column">
             <h2>Yesterday's Games</h2>
-            <div class="game-box" onclick="goToGameDetails('lakers-warriors')">
+            <div class="game-box" onclick="goToGameDetails('knicks-nets')">
                 <div class="game-header">
-                    <span class="team-lakers">Lakers</span> vs <span class="team-warriors">Warriors</span>
+                    <span class="team-knicks">Knicks</span> @ <span class="team-nets">Nets</span>
                 </div>
                 <div class="odds-section">
-                    <p><strong>Final Score:</strong> 110 - 102</p>
-                    <p><strong>Moneyline:</strong> Lakers -150 (Correct)</p>
-                    <p><strong>Over/Under:</strong> Over 210.5 (Correct)</p>
-                    <p><strong>Spread:</strong> Lakers -5.5 (<span class="incorrect">Incorrect</span>)</p>
+                    <p><strong>Final Score:</strong> 99 - 95</p>
+                    <p><strong>Moneyline:</strong> Knicks -909 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Over/Under:</strong> Over 219.5 (<span class="incorrect">Incorrect</span>)</p>
+                    <p><strong>Spread:</strong> Knicks -11.5 (<span class="correct">Correct</span>)</p>
                 </div>
             </div>
+            
+            <div class="game-box" onclick="goToGameDetails('trail-blazers-heat')">
+                <div class="game-header">
+                    <span class="team-trail-blazers">Trail Blazers</span> @ <span class="team-heat">Heat</span>
+                </div>
+                <div class="odds-section">
+                    <p><strong>Final Score:</strong> 116 - 107</p>
+                    <p><strong>Moneyline:</strong> Trail Blazers +311 (<span class="incorrect">Incorrect</span>)</p>
+                    <p><strong>Over/Under:</strong> Under 218.5 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Spread:</strong> Trail Blazers +8.5 (<span class="correct">Correct</span>)</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToGameDetails('magic-raptors')">
+                <div class="game-header">
+                    <span class="team-magic">Magic</span> @ <span class="team-raptors">Raptors</span>
+                </div>
+                <div class="odds-section">
+                    <p><strong>Final Score:</strong> 93 - 109</p>
+                    <p><strong>Moneyline:</strong> Raptors -104 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Over/Under:</strong> Over 212.5 (<span class="incorrect">Incorrect</span>)</p>
+                    <p><strong>Spread:</strong> Raptors -1 (<span class="incorrect">Incorrect</span>)</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToGameDetails('76ers-nuggets')">
+                <div class="game-header">
+                    <span class="team-76ers">76ers</span> @ <span class="team-nuggets">Nuggets</span>
+                </div>
+                <div class="odds-section">
+                    <p><strong>Final Score:</strong> 109 - 144</p>
+                    <p><strong>Moneyline:</strong> Nuggets -667 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Over/Under:</strong> Over 232.5 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Spread:</strong> Nuggets -11.5 (<span class="incorrect">Incorrect</span>)</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToGameDetails('wizards-lakers')">
+                <div class="game-header">
+                    <span class="team-wizards">Wizards</span> @ <span class="team-lakers">Lakers</span>
+                </div>
+                <div class="odds-section">
+                    <p><strong>Final Score:</strong> 88 - 111</p>
+                    <p><strong>Moneyline:</strong> Lakers -909 (<span class="correct">Correct</span>)</p>
+                    <p><strong>Over/Under:</strong> Over 227.5 (<span class="incorrect">Incorrect</span>)</p>
+                    <p><strong>Spread:</strong> Lakers -13.5 (<span class="correct">Correct</span>)</p>
+                </div>
+            </div>            
         </div>
 
 
         <!-- Column 2: Today's Games -->
         <div class="column">
             <h2>Today's Games</h2>
-            <div class="game-box" onclick="goToTodaysDetails('heat-bucks')">
+            <div class="game-box" onclick="goToTodaysDetails('suns-nets')">
                 <div class="game-header">
-                    <span class="team-heat">Heat</span> vs <span class="team-bucks">Bucks</span>
+                    <span class="team-suns">Suns</span> @ <span class="team-nets">Nets</span>
                 </div>
                 <div class="odds-section">
                     <h3>Moneyline</h3>
-                    <p><strong>Odds:</strong> Heat +150, Bucks -180</p>
-                    <p><strong>Prediction:</strong> Bucks</p>
+                    <p><strong>Odds:</strong> Suns -800, Nets +550</p>
+                    <p><strong>Prediction:</strong> Suns</p>
                 </div>
                 <div class="odds-section">
                     <h3>Over/Under</h3>
-                    <p><strong>Odds:</strong> Over 215.5 -110, Under 215.5 -110 </p>
-                    <p><strong>Prediction:</strong> Under 215.5</p>
+                    <p><strong>Odds:</strong> Over 216.5 -108, Under 216.5 -112</p>
+                    <p><strong>Prediction:</strong> Under 216.5</p>
                 </div>
                 <div class="odds-section">
                     <h3>Spread</h3>
-                    <p><strong>Odds:</strong> Bucks -3.5 -110, Heat +3.5 -115 </p>
-                    <p><strong>Prediction:</strong> Bucks -3.5</p>
+                    <p><strong>Odds:</strong> Suns -13 -108, Nets +13 -112</p>
+                    <p><strong>Prediction:</strong> Suns -13</p>
                 </div>
             </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('pistons-hawks')">
+                <div class="game-header">
+                    <span class="team-pistons">Pistons</span> @ <span class="team-hawks">Hawks</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Pistons +124, Hawks -148</p>
+                    <p><strong>Prediction:</strong> Hawks</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 234 -112, Under 234 -108</p>
+                    <p><strong>Prediction:</strong> Under 234</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Pistons +3 -105, Hawks -3 -115</p>
+                    <p><strong>Prediction:</strong> Hawks -3</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('jazz-thunder')">
+                <div class="game-header">
+                    <span class="team-jazz">Jazz</span> @ <span class="team-thunder">Thunder</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Jazz +900, Thunder -1600</p>
+                    <p><strong>Prediction:</strong> Thunder</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 230.5 -112, Under 230.5 -108</p>
+                    <p><strong>Prediction:</strong> Under 230.5</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Jazz +16.5 -110, Thunder -16.5 -110</p>
+                    <p><strong>Prediction:</strong> Thunder -16.5</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('cavaliers-rockets')">
+                <div class="game-header">
+                    <span class="team-cavaliers">Cavaliers</span> @ <span class="team-rockets">Rockets</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Cavaliers -148, Rockets +124</p>
+                    <p><strong>Prediction:</strong> Cavaliers</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 229.5 -112, Under 229.5 -108</p>
+                    <p><strong>Prediction:</strong> Under 229.5</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Cavaliers -3 -108, Rockets +3 -112</p>
+                    <p><strong>Prediction:</strong> Cavaliers -3</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('hornets-grizzlies')">
+                <div class="game-header">
+                    <span class="team-hornets">Hornets</span> @ <span class="team-grizzlies">Grizzlies</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Hornets +525, Grizzlies -750</p>
+                    <p><strong>Prediction:</strong> Grizzlies</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 240.5 -110, Under 240.5 -110</p>
+                    <p><strong>Prediction:</strong> Under 240.5</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Hornets +12.5 -112, Grizzlies -12.5 -108</p>
+                    <p><strong>Prediction:</strong> Grizzlies -12.5</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('warriors-kings')">
+                <div class="game-header">
+                    <span class="team-warriors">Warriors</span> @ <span class="team-kings">Kings</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Warriors +230, Kings -285</p>
+                    <p><strong>Prediction:</strong> Kings</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 230 -110, Under 230 -110</p>
+                    <p><strong>Prediction:</strong> Under 230</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Warriors +7 -105, Kings -7 -115</p>
+                    <p><strong>Prediction:</strong> Kings -7</p>
+                </div>
+            </div>
+            
+            <div class="game-box" onclick="goToTodaysDetails('celtics-clippers')">
+                <div class="game-header">
+                    <span class="team-celtics">Celtics</span> @ <span class="team-clippers">Clippers</span>
+                </div>
+                <div class="odds-section">
+                    <h3>Moneyline</h3>
+                    <p><strong>Odds:</strong> Celtics -470, Clippers +360</p>
+                    <p><strong>Prediction:</strong> Celtics</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Over/Under</h3>
+                    <p><strong>Odds:</strong> Over 218 -110, Under 218 -112</p>
+                    <p><strong>Prediction:</strong> Over 218</p>
+                </div>
+                <div class="odds-section">
+                    <h3>Spread</h3>
+                    <p><strong>Odds:</strong> Celtics -11 -110, Clippers +11 -110</p>
+                    <p><strong>Prediction:</strong> Celtics -11</p>
+                </div>
+            </div>
+            
         </div>
 
        <!-- Column 3: NBA News -->
