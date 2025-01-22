@@ -13,8 +13,13 @@ app.get('/', (req, res) => {
 });
 
 // Handle the game details page
-app.get('/game_details.html', (req, res) => {
+app.get('/game_details', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'game_details.html'));
+});
+
+// Handle the risk iq page
+app.get('/risk_iq.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'risk_iq.html'));
 });
 
 // Start the server

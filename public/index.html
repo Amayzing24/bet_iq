@@ -103,11 +103,92 @@
         .team-bucks {
             color: #A3D17D; /* Bucks Light Green */
         }
+        .info-text {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -10px;
+            color: #bbbbbb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+        }
+        .info-icon {
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .info-text {
+    position: relative;
+}
+
+.info-icon:hover + .popup {
+    display: block;
+}
+
+.popup {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background: #444444;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1;
+}
+
+.popup::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #444444 transparent;
+}
+
+.info-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.2s ease;
+}
+
+.info-link:hover {
+    color: #00bfff; /* Change the color on hover to make it more interactive */
+}
+
+
     </style>
 </head>
 <body>
     <br/>
     <div class="title">BetIQ</div>
+
+    <div class="info-text">
+        What is moneyline, over/under, and spread?
+        <span class="info-icon">ℹ️</span>
+        <div class="popup">
+            <strong>Moneyline:</strong> A bet on which team will win.<br>
+            <strong>Over/Under:</strong> A bet on the total points scored in the game.<br>
+            <strong>Spread:</strong> A bet on the margin of victory or defeat (e.g. Lakers -3 means Lakers win by 3 or more).
+        </div>
+    </div>
+    <br/>
+    <div class="info-text">
+        <a href="/risk_iq.html" class="info-link">Go to RiskIQ</a>
+        <span class="info-icon">ℹ️</span>
+        <div class="popup">
+            RiskIQ provides information on how to gamble safely and effectively.
+        </div>
+    </div>
+    
     <div class="container">
 
         <!-- Column 1: Yesterday's Games -->
@@ -152,16 +233,18 @@
             </div>
         </div>
 
-        <!-- Column 3: NBA News -->
+       <!-- Column 3: NBA News -->
         <div class="column">
-            <h2>NBA News</h2>
-            <div class="news-box">
+            <div class="odds-section">
+                <h2>NBA News</h2>
                 <h4>Giannis Antetokounmpo Out Due to Injury</h4>
                 <p>The Bucks star will miss today's game against the Heat due to a sprained ankle.</p>
             </div>
-            <div class="chart-container">
+            <div class="odds-section">
                 <h2>Model Profitability Over Time</h2>
-                <canvas id="profitChart"></canvas>
+                <div class="chart-container">
+                    <canvas id="profitChart"></canvas>
+                </div>
             </div>
         </div>
     </div>
@@ -224,6 +307,10 @@
 
         function goToTodaysDetails(gameId) {
             window.location.href = `todays_details.html?gameId=${gameId}`;
+        }
+
+        function goToRiskIq() {
+            window.location.href = `risk_iq.html`;
         }
     </script>
 </body>
