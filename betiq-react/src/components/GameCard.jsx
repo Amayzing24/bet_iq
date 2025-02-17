@@ -1,12 +1,17 @@
 import React from "react"
-import { Box, Heading, Text, Badge, Stack, useColorModeValue } from "@chakra-ui/react"
+import { Box, Heading, Text, Badge, Stack, useColorModeValue, useTheme } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 
 export default function GameCard({ game, isYesterday }) {
   const navigate = useNavigate()
-  const bgColor = useColorModeValue("white", "gray.800")
-  const hoverBgColor = useColorModeValue("gray.50", "gray.700")
-  const borderColor = useColorModeValue("gray.200", "whiteAlpha.100")
+  const theme = useTheme()
+  const bgColor = useColorModeValue(theme.colors.lightMode.cardBg, "gray.800")
+  const hoverBgColor = useColorModeValue(theme.colors.lightMode.hoverBg, "gray.700")
+  const borderColor = useColorModeValue(theme.colors.lightMode.border, "whiteAlpha.100")
+  const sectionBgColor = useColorModeValue(theme.colors.lightMode.sectionBg, "gray.900")
+  const accentColor = useColorModeValue(theme.colors.lightMode.text.accent, "brand.200")
+  const textColor = useColorModeValue(theme.colors.lightMode.text.primary, "whiteAlpha.900")
+  const secondaryTextColor = useColorModeValue(theme.colors.lightMode.text.secondary, "whiteAlpha.800")
 
   const handleClick = () => {
     if (isYesterday) {
@@ -32,14 +37,14 @@ export default function GameCard({ game, isYesterday }) {
       }}
       transition="all 0.2s ease-in-out"
       onClick={handleClick}
-      boxShadow="md"
+      boxShadow={useColorModeValue("md", "lg")}
     >
       <Heading 
         as="h3" 
         size="md" 
         textAlign="center" 
         mb={4}
-        color={useColorModeValue("gray.800", "white")}
+        color={textColor}
       >
         {game.homeTeam} vs {game.awayTeam}
       </Heading>
@@ -50,15 +55,17 @@ export default function GameCard({ game, isYesterday }) {
             fontSize="lg" 
             textAlign="center" 
             fontWeight="bold"
-            color={useColorModeValue("brand.600", "brand.200")}
+            color={accentColor}
             mb={2}
           >
             Final Score: {game.finalScore}
           </Text>
           <Box 
             p={4} 
-            bg={useColorModeValue("gray.50", "gray.900")} 
+            bg={sectionBgColor}
             borderRadius="lg"
+            borderWidth="1px"
+            borderColor={borderColor}
           >
             <Stack spacing={3}>
               <PredictionRow
@@ -102,40 +109,59 @@ export default function GameCard({ game, isYesterday }) {
   )
 }
 
-const PredictionRow = ({ label, value, isCorrect }) => (
-  <Stack direction="row" justify="space-between" align="center">
-    <Text fontWeight="medium">{label}:</Text>
-    <Stack direction="row" align="center" spacing={2}>
-      <Text>{value}</Text>
-      <Badge 
-        colorScheme={isCorrect ? "green" : "red"}
-        variant="subtle"
-        px={2}
-        py={1}
-        borderRadius="full"
-      >
-        {isCorrect ? "Correct" : "Incorrect"}
-      </Badge>
+const PredictionRow = ({ label, value, isCorrect }) => {
+  const theme = useTheme()
+  const labelColor = useColorModeValue(theme.colors.lightMode.text.secondary, "whiteAlpha.800")
+  const valueColor = useColorModeValue(theme.colors.lightMode.text.primary, "whiteAlpha.900")
+  
+  return (
+    <Stack direction="row" justify="space-between" align="center">
+      <Text fontWeight="medium" color={labelColor}>{label}:</Text>
+      <Stack direction="row" align="center" spacing={2}>
+        <Text color={valueColor}>{value}</Text>
+        <Badge 
+          colorScheme={isCorrect ? "green" : "red"}
+          variant="subtle"
+          px={2}
+          py={1}
+          borderRadius="full"
+        >
+          {isCorrect ? "Correct" : "Incorrect"}
+        </Badge>
+      </Stack>
     </Stack>
-  </Stack>
-)
+  )
+}
 
-const PredictionSection = ({ label, odds, prediction }) => (
-  <Box 
-    p={3} 
-    bg={useColorModeValue("gray.50", "gray.900")}
-    borderRadius="lg"
-  >
-    <Text fontWeight="bold" mb={2} color={useColorModeValue("brand.600", "brand.200")}>
-      {label}
-    </Text>
-    <Stack spacing={1}>
-      <Text fontSize="sm">
-        <Text as="span" fontWeight="medium">Odds:</Text> {odds}
+const PredictionSection = ({ label, odds, prediction }) => {
+  const theme = useTheme()
+  const sectionBgColor = useColorModeValue(theme.colors.lightMode.sectionBg, "gray.900")
+  const borderColor = useColorModeValue(theme.colors.lightMode.border, "whiteAlpha.100")
+  const labelColor = useColorModeValue(theme.colors.lightMode.text.accent, "brand.200")
+  const textColor = useColorModeValue(theme.colors.lightMode.text.secondary, "whiteAlpha.800")
+  const valueColor = useColorModeValue(theme.colors.lightMode.text.primary, "whiteAlpha.900")
+
+  return (
+    <Box 
+      p={3} 
+      bg={sectionBgColor}
+      borderRadius="lg"
+      borderWidth="1px"
+      borderColor={borderColor}
+    >
+      <Text fontWeight="bold" mb={2} color={labelColor}>
+        {label}
       </Text>
-      <Text fontSize="sm">
-        <Text as="span" fontWeight="medium">Prediction:</Text> {prediction}
-      </Text>
-    </Stack>
-  </Box>
-)
+      <Stack spacing={1}>
+        <Text fontSize="sm" color={textColor}>
+          <Text as="span" fontWeight="medium">Odds:</Text>{" "}
+          <Text as="span" color={valueColor}>{odds}</Text>
+        </Text>
+        <Text fontSize="sm" color={textColor}>
+          <Text as="span" fontWeight="medium">Prediction:</Text>{" "}
+          <Text as="span" color={valueColor}>{prediction}</Text>
+        </Text>
+      </Stack>
+    </Box>
+  )
+}

@@ -1,18 +1,22 @@
 import React from "react"
-import { Flex, Heading, Spacer, IconButton } from "@chakra-ui/react"
+import { Flex, Heading, Spacer, IconButton, useColorModeValue } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import { useColorMode } from "@chakra-ui/react"
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode()
+  const bgColor = useColorModeValue("white", "gray.800")
+  const borderColor = useColorModeValue("gray.200", "whiteAlpha.100")
 
   return (
     <Flex
-      bg="gray.800"
+      bg={bgColor}
       p={4}
       align="center"
       boxShadow="md"
+      borderBottomWidth="1px"
+      borderColor={borderColor}
     >
       <Link to="/">
         <Heading
