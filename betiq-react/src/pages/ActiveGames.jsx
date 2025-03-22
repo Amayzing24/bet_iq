@@ -114,6 +114,7 @@ const ActiveGames = () => {
       time: "4:11",
       quarter: "2ND QUARTER",
       isLive: true,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -185,6 +186,7 @@ const ActiveGames = () => {
       time: "1:30",
       quarter: "3RD QUARTER",
       isLive: true,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -256,6 +258,7 @@ const ActiveGames = () => {
       time: "8:45",
       quarter: "4TH QUARTER",
       isLive: true,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -327,6 +330,7 @@ const ActiveGames = () => {
       time: "8:20",
       quarter: "1ST QUARTER",
       isLive: true,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -398,6 +402,7 @@ const ActiveGames = () => {
       time: "2:55",
       quarter: "2ND QUARTER",
       isLive: true,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -465,6 +470,7 @@ const ActiveGames = () => {
       homeTeam: "PHI 76ers",
       awayTeam: "TOR Raptors",
       isLive: false,
+      isDone: false,
       odds: {
         draftkings: {
           spread: { 
@@ -539,9 +545,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "CLE", points: 6.5, odds: -110 },
-      total: { value: 219.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -250, away: +200 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "CLE", 
+            points: 6.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -250, 
+            away: +200,
+            pick: "CLE"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "CLE", 
+            points: 6.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -250, 
+            away: +200,
+            pick: "CLE"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "CLE", 
+            points: 6.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -250, 
+            away: +200,
+            pick: "CLE"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "W", "L"],
       awayForm: ["L", "L", "W", "L", "W"]
     },
@@ -554,9 +617,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "OKC", points: 8.5, odds: -110 },
-      total: { value: 230.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -380, away: +290 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "OKC", 
+            points: 8.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -380, 
+            away: +290,
+            pick: "OKC"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "OKC", 
+            points: 8.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -380, 
+            away: +290,
+            pick: "OKC"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "OKC", 
+            points: 8.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -380, 
+            away: +290,
+            pick: "OKC"
+          }
+        }
+      },
       homeForm: ["W", "W", "W", "W", "L"],
       awayForm: ["L", "W", "L", "L", "L"]
     },
@@ -569,9 +689,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "ATL", points: 5.5, odds: -110 },
-      total: { value: 226.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +190, away: -230 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5.5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +190, 
+            away: -230,
+            pick: "ATL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5.5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +190, 
+            away: -230,
+            pick: "ATL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5.5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +190, 
+            away: -230,
+            pick: "ATL"
+          }
+        }
+      },
       homeForm: ["L", "L", "L", "W", "L"],
       awayForm: ["W", "L", "W", "W", "W"]
     },
@@ -584,9 +761,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "MIN", points: 10.5, odds: -110 },
-      total: { value: 227.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -500, away: +380 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "MIN", 
+            points: 10.5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -500, 
+            away: +380,
+            pick: "MIN"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "MIN", 
+            points: 10.5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -500, 
+            away: +380,
+            pick: "MIN"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "MIN", 
+            points: 10.5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -500, 
+            away: +380,
+            pick: "MIN"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["L", "L", "L", "L", "W"]
     },
@@ -599,9 +833,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "SAS", points: 7, odds: -110 },
-      total: { value: 229.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -275, away: +220 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "SAS", 
+            points: 7, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -275, 
+            away: +220,
+            pick: "SAS"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "SAS", 
+            points: 7, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -275, 
+            away: +220,
+            pick: "SAS"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "SAS", 
+            points: 7, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -275, 
+            away: +220,
+            pick: "SAS"
+          }
+        }
+      },
       homeForm: ["W", "L", "L", "W", "L"],
       awayForm: ["L", "L", "L", "L", "W"]
     }
@@ -617,9 +908,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "SAC", points: 7.5, odds: -110 },
-      total: { value: 228.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +260, away: -320 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "SAC", 
+            points: 7.5, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +260, 
+            away: -320,
+            pick: "SAC"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "SAC", 
+            points: 7.5, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +260, 
+            away: -320,
+            pick: "SAC"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "SAC", 
+            points: 7.5, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +260, 
+            away: -320,
+            pick: "SAC"
+          }
+        }
+      },
       homeForm: ["L", "L", "W", "L", "L"],
       awayForm: ["W", "W", "L", "W", "W"]
     },
@@ -632,9 +980,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER", 
       isLive: false,
-      spread: { favorite: "NYK", points: 4.5, odds: -110 },
-      total: { value: 215.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -180, away: +150 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "NYK", 
+            points: 4.5, 
+            odds: -110,
+            pick: "NYK"
+          },
+          total: { 
+            value: 215.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "NYK"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "NYK", 
+            points: 4.5, 
+            odds: -110,
+            pick: "NYK"
+          },
+          total: { 
+            value: 215.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "NYK"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "NYK", 
+            points: 4.5, 
+            odds: -110,
+            pick: "NYK"
+          },
+          total: { 
+            value: 215.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "NYK"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["L", "W", "L", "W", "L"]
     },
@@ -647,9 +1052,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "MIL", points: 9.5, odds: -110 },
-      total: { value: 230.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -450, away: +340 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "MIL", 
+            points: 9.5, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +340,
+            pick: "MIL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "MIL", 
+            points: 9.5, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +340,
+            pick: "MIL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "MIL", 
+            points: 9.5, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +340,
+            pick: "MIL"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["L", "W", "L", "L", "L"]
     },
@@ -662,9 +1124,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "NOP", points: 3.5, odds: -110 },
-      total: { value: 222.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -165, away: +140 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "NOP", 
+            points: 3.5, 
+            odds: -110,
+            pick: "NOP"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -165, 
+            away: +140,
+            pick: "NOP"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "NOP", 
+            points: 3.5, 
+            odds: -110,
+            pick: "NOP"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -165, 
+            away: +140,
+            pick: "NOP"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "NOP", 
+            points: 3.5, 
+            odds: -110,
+            pick: "NOP"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -165, 
+            away: +140,
+            pick: "NOP"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "W", "L"],
       awayForm: ["W", "L", "W", "L", "L"]
     },
@@ -677,9 +1196,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "CLE", points: 2.5, odds: -110 },
-      total: { value: 218.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +120, away: -140 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "CLE", 
+            points: 2.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +120, 
+            away: -140,
+            pick: "CLE"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "CLE", 
+            points: 2.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +120, 
+            away: -140,
+            pick: "CLE"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "CLE", 
+            points: 2.5, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +120, 
+            away: -140,
+            pick: "CLE"
+          }
+        }
+      },
       homeForm: ["L", "W", "W", "L", "W"],
       awayForm: ["W", "L", "W", "W", "L"]
     }
@@ -695,9 +1271,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "DEN", points: 3.5, odds: -110 },
-      total: { value: 226.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +145, away: -170 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "DEN", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +145, 
+            away: -170,
+            pick: "DEN"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "DEN", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +145, 
+            away: -170,
+            pick: "DEN"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "DEN", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +145, 
+            away: -170,
+            pick: "DEN"
+          }
+        }
+      },
       homeForm: ["L", "W", "W", "L", "W"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -710,9 +1343,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "GSW", points: 11.5, odds: -110 },
-      total: { value: 233.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -600, away: +450 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "GSW", 
+            points: 11.5, 
+            odds: -110,
+            pick: "GSW"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -600, 
+            away: +450,
+            pick: "GSW"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "GSW", 
+            points: 11.5, 
+            odds: -110,
+            pick: "GSW"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -600, 
+            away: +450,
+            pick: "GSW"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "GSW", 
+            points: 11.5, 
+            odds: -110,
+            pick: "GSW"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -600, 
+            away: +450,
+            pick: "GSW"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "L", "W"],
       awayForm: ["L", "L", "L", "W", "L"]
     },
@@ -725,9 +1415,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "ATL", points: 5, odds: -110 },
-      total: { value: 224.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +180, away: -220 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +180, 
+            away: -220,
+            pick: "ATL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +180, 
+            away: -220,
+            pick: "ATL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "ATL", 
+            points: 5, 
+            odds: -110,
+            pick: "ATL"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +180, 
+            away: -220,
+            pick: "ATL"
+          }
+        }
+      },
       homeForm: ["L", "W", "L", "L", "W"],
       awayForm: ["W", "L", "W", "W", "W"]
     },
@@ -740,9 +1487,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "IND", points: 4, odds: -110 },
-      total: { value: 230.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -175, away: +145 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "IND", 
+            points: 4, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -175, 
+            away: +145,
+            pick: "IND"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "IND", 
+            points: 4, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -175, 
+            away: +145,
+            pick: "IND"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "IND", 
+            points: 4, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -175, 
+            away: +145,
+            pick: "IND"
+          }
+        }
+      },
       homeForm: ["W", "W", "W", "L", "W"],
       awayForm: ["L", "L", "W", "W", "L"]
     },
@@ -755,9 +1559,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "BOS", points: 12, odds: -110 },
-      total: { value: 229.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -650, away: +475 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "BOS", 
+            points: 12, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -650, 
+            away: +475,
+            pick: "BOS"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "BOS", 
+            points: 12, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -650, 
+            away: +475,
+            pick: "BOS"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "BOS", 
+            points: 12, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 229.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -650, 
+            away: +475,
+            pick: "BOS"
+          }
+        }
+      },
       homeForm: ["W", "W", "W", "W", "L"],
       awayForm: ["L", "L", "L", "W", "L"]
     }
@@ -773,9 +1634,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "DAL", points: 1.5, odds: -110 },
-      total: { value: 235.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +105, away: -125 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "DAL", 
+            points: 1.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +105, 
+            away: -125,
+            pick: "DAL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "DAL", 
+            points: 1.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +105, 
+            away: -125,
+            pick: "DAL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "DAL", 
+            points: 1.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +105, 
+            away: -125,
+            pick: "DAL"
+          }
+        }
+      },
       homeForm: ["L", "W", "L", "W", "L"],
       awayForm: ["W", "W", "L", "L", "W"]
     },
@@ -788,9 +1706,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "CHI", points: 7, odds: -110 },
-      total: { value: 225.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -300, away: +240 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "CHI", 
+            points: 7, 
+            odds: -110,
+            pick: "CHI"
+          },
+          total: { 
+            value: 225.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "CHI"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "CHI", 
+            points: 7, 
+            odds: -110,
+            pick: "CHI"
+          },
+          total: { 
+            value: 225.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "CHI"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "CHI", 
+            points: 7, 
+            odds: -110,
+            pick: "CHI"
+          },
+          total: { 
+            value: 225.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "CHI"
+          }
+        }
+      },
       homeForm: ["L", "L", "W", "L", "W"],
       awayForm: ["L", "L", "L", "L", "W"]
     },
@@ -803,9 +1778,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "OKC", points: 6.5, odds: -110 },
-      total: { value: 227.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +220, away: -270 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "OKC", 
+            points: 6.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +220, 
+            away: -270,
+            pick: "OKC"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "OKC", 
+            points: 6.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +220, 
+            away: -270,
+            pick: "OKC"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "OKC", 
+            points: 6.5, 
+            odds: -110,
+            pick: "OKC"
+          },
+          total: { 
+            value: 227.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +220, 
+            away: -270,
+            pick: "OKC"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "L", "L"],
       awayForm: ["W", "W", "W", "W", "L"]
     },
@@ -818,9 +1850,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "SAS", points: 2, odds: -110 },
-      total: { value: 221.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +115, away: -135 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "SAS", 
+            points: 2, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 221.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +115, 
+            away: -135,
+            pick: "SAS"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "SAS", 
+            points: 2, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 221.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +115, 
+            away: -135,
+            pick: "SAS"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "SAS", 
+            points: 2, 
+            odds: -110,
+            pick: "SAS"
+          },
+          total: { 
+            value: 221.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +115, 
+            away: -135,
+            pick: "SAS"
+          }
+        }
+      },
       homeForm: ["L", "W", "L", "L", "L"],
       awayForm: ["W", "L", "L", "W", "L"]
     },
@@ -833,9 +1922,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "ORL", points: 8, odds: -110 },
-      total: { value: 222.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +290, away: -360 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "ORL", 
+            points: 8, 
+            odds: -110,
+            pick: "ORL"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +290, 
+            away: -360,
+            pick: "ORL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "ORL", 
+            points: 8, 
+            odds: -110,
+            pick: "ORL"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +290, 
+            away: -360,
+            pick: "ORL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "ORL", 
+            points: 8, 
+            odds: -110,
+            pick: "ORL"
+          },
+          total: { 
+            value: 222.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +290, 
+            away: -360,
+            pick: "ORL"
+          }
+        }
+      },
       homeForm: ["L", "L", "L", "L", "W"],
       awayForm: ["L", "W", "W", "L", "W"]
     }
@@ -851,9 +1997,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "MIN", points: 5, odds: -110 },
-      total: { value: 233.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -200, away: +170 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "MIN", 
+            points: 5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -200, 
+            away: +170,
+            pick: "MIN"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "MIN", 
+            points: 5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -200, 
+            away: +170,
+            pick: "MIN"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "MIN", 
+            points: 5, 
+            odds: -110,
+            pick: "MIN"
+          },
+          total: { 
+            value: 233.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -200, 
+            away: +170,
+            pick: "MIN"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -866,9 +2069,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "SAC", points: 3, odds: -110 },
-      total: { value: 226.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -150, away: +125 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "SAC", 
+            points: 3, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -150, 
+            away: +125,
+            pick: "SAC"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "SAC", 
+            points: 3, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -150, 
+            away: +125,
+            pick: "SAC"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "SAC", 
+            points: 3, 
+            odds: -110,
+            pick: "SAC"
+          },
+          total: { 
+            value: 226.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -150, 
+            away: +125,
+            pick: "SAC"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["L", "W", "W", "L", "W"]
     },
@@ -881,9 +2141,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "PHI", points: 8, odds: -110 },
-      total: { value: 228.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -360, away: +280 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "PHI", 
+            points: 8, 
+            odds: -110,
+            pick: "PHI"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -360, 
+            away: +280,
+            pick: "PHI"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "PHI", 
+            points: 8, 
+            odds: -110,
+            pick: "PHI"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -360, 
+            away: +280,
+            pick: "PHI"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "PHI", 
+            points: 8, 
+            odds: -110,
+            pick: "PHI"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -360, 
+            away: +280,
+            pick: "PHI"
+          }
+        }
+      },
       homeForm: ["L", "W", "L", "W", "L"],
       awayForm: ["L", "W", "L", "L", "L"]
     },
@@ -896,9 +2213,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "MIL", points: 6, odds: -110 },
-      total: { value: 232.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +200, away: -240 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "MIL", 
+            points: 6, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +200, 
+            away: -240,
+            pick: "MIL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "MIL", 
+            points: 6, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +200, 
+            away: -240,
+            pick: "MIL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "MIL", 
+            points: 6, 
+            odds: -110,
+            pick: "MIL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +200, 
+            away: -240,
+            pick: "MIL"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "W", "W"],
       awayForm: ["W", "W", "L", "W", "W"]
     },
@@ -911,9 +2285,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "CLE", points: 1, odds: -110 },
-      total: { value: 219.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +100, away: -120 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "CLE", 
+            points: 1, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +100, 
+            away: -120,
+            pick: "CLE"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "CLE", 
+            points: 1, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +100, 
+            away: -120,
+            pick: "CLE"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "CLE", 
+            points: 1, 
+            odds: -110,
+            pick: "CLE"
+          },
+          total: { 
+            value: 219.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +100, 
+            away: -120,
+            pick: "CLE"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "W", "W"],
       awayForm: ["W", "L", "W", "W", "L"]
     }
@@ -929,9 +2360,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "POR", points: 1.5, odds: -110 },
-      total: { value: 220.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -125, away: +105 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "POR", 
+            points: 1.5, 
+            odds: -110,
+            pick: "POR"
+          },
+          total: { 
+            value: 220.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -125, 
+            away: +105,
+            pick: "POR"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "POR", 
+            points: 1.5, 
+            odds: -110,
+            pick: "POR"
+          },
+          total: { 
+            value: 220.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -125, 
+            away: +105,
+            pick: "POR"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "POR", 
+            points: 1.5, 
+            odds: -110,
+            pick: "POR"
+          },
+          total: { 
+            value: 220.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -125, 
+            away: +105,
+            pick: "POR"
+          }
+        }
+      },
       homeForm: ["L", "L", "L", "W", "L"],
       awayForm: ["L", "L", "W", "L", "L"]
     },
@@ -944,9 +2432,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "DEN", points: 2, odds: -110 },
-      total: { value: 230.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +110, away: -130 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "DEN", 
+            points: 2, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +110, 
+            away: -130,
+            pick: "DEN"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "DEN", 
+            points: 2, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +110, 
+            away: -130,
+            pick: "DEN"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "DEN", 
+            points: 2, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 230.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +110, 
+            away: -130,
+            pick: "DEN"
+          }
+        }
+      },
       homeForm: ["W", "W", "L", "L", "W"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -959,9 +2504,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "MIA", points: 7, odds: -110 },
-      total: { value: 217.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: -300, away: +240 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "MIA", 
+            points: 7, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 217.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "MIA"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "MIA", 
+            points: 7, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 217.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "MIA"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "MIA", 
+            points: 7, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 217.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -300, 
+            away: +240,
+            pick: "MIA"
+          }
+        }
+      },
       homeForm: ["L", "L", "W", "W", "L"],
       awayForm: ["L", "W", "L", "L", "W"]
     },
@@ -974,9 +2576,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "IND", points: 8, odds: -110 },
-      total: { value: 231.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +280, away: -350 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "IND", 
+            points: 8, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 231.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +280, 
+            away: -350,
+            pick: "IND"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "IND", 
+            points: 8, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 231.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +280, 
+            away: -350,
+            pick: "IND"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "IND", 
+            points: 8, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 231.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +280, 
+            away: -350,
+            pick: "IND"
+          }
+        }
+      },
       homeForm: ["L", "L", "L", "W", "L"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -989,9 +2648,66 @@ const ActiveGames = () => {
       time: "FINAL",
       quarter: "GAME OVER",
       isLive: false,
-      spread: { favorite: "BOS", points: 13.5, odds: -110 },
-      total: { value: 224.5, overOdds: -110, underOdds: -110 },
-      moneyline: { home: +700, away: -1100 },
+      isDone: true,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "BOS", 
+            points: 13.5, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +700, 
+            away: -1100,
+            pick: "BOS"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "BOS", 
+            points: 13.5, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +700, 
+            away: -1100,
+            pick: "BOS"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "BOS", 
+            points: 13.5, 
+            odds: -110,
+            pick: "BOS"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +700, 
+            away: -1100,
+            pick: "BOS"
+          }
+        }
+      },
       homeForm: ["L", "L", "L", "L", "W"],
       awayForm: ["W", "W", "W", "W", "L"]
     }
@@ -1167,20 +2883,20 @@ const ActiveGames = () => {
                 mx={2}
                 p={3}
                 borderRadius="md"
-                bg={day.isToday ? "blue.900" : "gray.800"}
+                bg={selectedDate.getDate() === day.fullDate.getDate() ? "blue.900" : "gray.800"}
                 cursor="pointer"
                 onClick={() => handleDateClick(day)}
                 transition="all 0.2s"
                 _hover={{ bg: "gray.700" }}
                 boxShadow="md"
                 borderWidth="1px"
-                borderColor={day.isToday ? "cyan.400" : "transparent"}
+                borderColor={selectedDate.getDate() === day.fullDate.getDate() ? "cyan.400" : "transparent"}
               >
-                <Text color="white" fontWeight={day.isToday ? "bold" : "normal"}>
+                <Text color="white" fontWeight={selectedDate.getDate() === day.fullDate.getDate() ? "bold" : "normal"}>
                   {day.display}
                 </Text>
                 {day.isToday && (
-                  <Badge colorScheme="cyan" mt={1}>Today</Badge>
+                  <Badge colorScheme="gray" mt={1}>Today</Badge>
                 )}
               </Box>
             ))}
@@ -1256,6 +2972,8 @@ const ActiveGames = () => {
                       <Badge colorScheme="green" variant="solid" px={2}>LIVE</Badge>
                       <Text color="gray.300" fontSize="sm">{game.quarter}</Text>
                     </>
+                  ) : game.isDone ? (
+                    <Text color="gray.300" fontSize="sm">FINAL</Text>
                   ) : (
                     <Text color="gray.300" fontSize="sm">Upcoming</Text>
                   )}
@@ -1272,7 +2990,7 @@ const ActiveGames = () => {
                     />
                     <Text color="white" fontWeight="bold">{game.awayTeam}</Text>
                   </Flex>
-                  {game.isLive && (
+                  {(game.isLive || game.isDone) && (
                     <Text color="yellow.400" fontWeight="bold">{game.awayScore}</Text>
                   )}
                 </Flex>
@@ -1288,7 +3006,7 @@ const ActiveGames = () => {
                     />
                     <Text color="white" fontWeight="bold">{game.homeTeam}</Text>
                   </Flex>
-                  {game.isLive && (
+                  {(game.isLive || game.isDone) && (
                     <Text color="yellow.400" fontWeight="bold">{game.homeScore}</Text>
                   )}
                 </Flex>
@@ -1354,7 +3072,7 @@ const ActiveGames = () => {
                 />
                 <Text color="white" fontWeight="bold" fontSize="xl">{selectedGame.awayTeam}</Text>
               </Flex>
-              {selectedGame.isLive && (
+              {(selectedGame.isLive || selectedGame.isDone) && (
                 <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.awayScore}</Text>
               )}
               {renderForm(selectedGame.awayForm)}
@@ -1376,7 +3094,7 @@ const ActiveGames = () => {
                   alt={getTeamCode(selectedGame.homeTeam)}
                 />
               </Flex>
-              {selectedGame.isLive && (
+              {(selectedGame.isLive || selectedGame.isDone) && (
                 <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.homeScore}</Text>
               )}
               <HStack justify="flex-end" w="full">
