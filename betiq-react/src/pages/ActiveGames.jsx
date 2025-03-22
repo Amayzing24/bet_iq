@@ -15,7 +15,8 @@ import {
   useColorModeValue,
   Button,
   Image,
-  Tooltip
+  Tooltip,
+  ButtonGroup
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon, InfoIcon, StarIcon } from "@chakra-ui/icons";
 
@@ -85,6 +86,22 @@ const getLastSevenDays = () => {
   return days;
 };
 
+// Add sportsbook constants
+const SPORTSBOOKS = {
+  DRAFTKINGS: {
+    name: "DraftKings",
+    logo: "https://logo.clearbit.com/draftkings.com",
+  },
+  FANDUEL: {
+    name: "FanDuel",
+    logo: "https://logo.clearbit.com/fanduel.com",
+  },
+  ESPNBET: {
+    name: "ESPN BET",
+    logo: "https://logo.clearbit.com/espn.com",
+  }
+};
+
 const ActiveGames = () => {
   // Sample active games data
   const activeGames = [
@@ -97,9 +114,65 @@ const ActiveGames = () => {
       time: "4:11",
       quarter: "2ND QUARTER",
       isLive: true,
-      spread: { favorite: "IND", points: 15.5, odds: -115, pick: "IND" },
-      total: { value: 221.5, overOdds: -115, underOdds: -115, pick: "UNDER" },
-      moneyline: { home: +1100, away: -2500, pick: "IND" },
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "IND", 
+            points: 15.5, 
+            odds: -115,
+            pick: "IND"
+          },
+          total: { 
+            value: 221.5, 
+            overOdds: -115, 
+            underOdds: -115,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +1100, 
+            away: -2500,
+            pick: "IND"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "IND", 
+            points: 15, 
+            odds: -110,
+            pick: "IND"
+          },
+          total: { 
+            value: 222, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +1050, 
+            away: -2300,
+            pick: "IND"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "IND", 
+            points: 15.5, 
+            odds: -112,
+            pick: "IND"
+          },
+          total: { 
+            value: 221.5, 
+            overOdds: -112, 
+            underOdds: -112,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: +1080, 
+            away: -2400,
+            pick: "IND"
+          }
+        }
+      },
       homeForm: ["L", "W", "L", "L", "W"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -112,9 +185,65 @@ const ActiveGames = () => {
       time: "1:30",
       quarter: "3RD QUARTER",
       isLive: true,
-      spread: { favorite: "LAL", points: 4.5, odds: -110, pick: "LAL" },
-      total: { value: 235.5, overOdds: -110, underOdds: -110, pick: "OVER" },
-      moneyline: { home: -180, away: +150, pick: "LAL" },
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "LAL", 
+            points: 4.5, 
+            odds: -110,
+            pick: "LAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "LAL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "LAL", 
+            points: 4.5, 
+            odds: -110,
+            pick: "LAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "LAL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "LAL", 
+            points: 4.5, 
+            odds: -110,
+            pick: "LAL"
+          },
+          total: { 
+            value: 235.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -180, 
+            away: +150,
+            pick: "LAL"
+          }
+        }
+      },
       homeForm: ["W", "W", "W", "L", "W"],
       awayForm: ["L", "W", "L", "W", "L"]
     },
@@ -127,9 +256,65 @@ const ActiveGames = () => {
       time: "8:45",
       quarter: "4TH QUARTER",
       isLive: true,
-      spread: { favorite: "BOS", points: 7.5, odds: -110, pick: "MIA" },
-      total: { value: 218.5, overOdds: -110, underOdds: -110, pick: "OVER" },
-      moneyline: { home: +320, away: -400, pick: "BOS" },
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "BOS", 
+            points: 7.5, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +320, 
+            away: -400,
+            pick: "BOS"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "BOS", 
+            points: 7.5, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +320, 
+            away: -400,
+            pick: "BOS"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "BOS", 
+            points: 7.5, 
+            odds: -110,
+            pick: "MIA"
+          },
+          total: { 
+            value: 218.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: +320, 
+            away: -400,
+            pick: "BOS"
+          }
+        }
+      },
       homeForm: ["L", "L", "W", "W", "L"],
       awayForm: ["W", "W", "W", "W", "L"]
     },
@@ -142,9 +327,65 @@ const ActiveGames = () => {
       time: "8:20",
       quarter: "1ST QUARTER",
       isLive: true,
-      spread: { favorite: "GSW", points: 3.5, odds: -110, pick: "DAL" },
-      total: { value: 232.5, overOdds: -110, underOdds: -110, pick: "UNDER" },
-      moneyline: { home: -160, away: +135, pick: "DAL" },
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "GSW", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -160, 
+            away: +135,
+            pick: "DAL"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "GSW", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -160, 
+            away: +135,
+            pick: "DAL"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "GSW", 
+            points: 3.5, 
+            odds: -110,
+            pick: "DAL"
+          },
+          total: { 
+            value: 232.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -160, 
+            away: +135,
+            pick: "DAL"
+          }
+        }
+      },
       homeForm: ["W", "L", "W", "L", "W"],
       awayForm: ["W", "W", "L", "L", "W"]
     },
@@ -157,11 +398,134 @@ const ActiveGames = () => {
       time: "2:55",
       quarter: "2ND QUARTER",
       isLive: true,
-      spread: { favorite: "DEN", points: 9.5, odds: -110, pick: "DEN" },
-      total: { value: 224.5, overOdds: -110, underOdds: -110, pick: "OVER" },
-      moneyline: { home: -450, away: +350, pick: "DEN" },
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "DEN", 
+            points: 9.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +350,
+            pick: "DEN"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "DEN", 
+            points: 9.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +350,
+            pick: "DEN"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "DEN", 
+            points: 9.5, 
+            odds: -110,
+            pick: "DEN"
+          },
+          total: { 
+            value: 224.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "UNDER"
+          },
+          moneyline: { 
+            home: -450, 
+            away: +350,
+            pick: "DEN"
+          }
+        }
+      },
       homeForm: ["W", "W", "W", "L", "W"],
       awayForm: ["L", "L", "L", "W", "L"]
+    },
+    {
+      id: 6,
+      homeTeam: "PHI 76ers",
+      awayTeam: "TOR Raptors",
+      isLive: false,
+      odds: {
+        draftkings: {
+          spread: { 
+            favorite: "PHI", 
+            points: 6.5, 
+            odds: -110,
+            pick: "TOR"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -240, 
+            away: +200,
+            pick: "PHI"
+          }
+        },
+        fanduel: {
+          spread: { 
+            favorite: "PHI", 
+            points: 6.5, 
+            odds: -110,
+            pick: "TOR"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -240, 
+            away: +200,
+            pick: "PHI"
+          }
+        },
+        espnBet: {
+          spread: { 
+            favorite: "PHI", 
+            points: 6.5, 
+            odds: -110,
+            pick: "TOR"
+          },
+          total: { 
+            value: 228.5, 
+            overOdds: -110, 
+            underOdds: -110,
+            pick: "OVER"
+          },
+          moneyline: { 
+            home: -240, 
+            away: +200,
+            pick: "PHI"
+          }
+        }
+      },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["L", "L", "W", "L", "W"]
     }
   ];
   
@@ -639,6 +1003,7 @@ const ActiveGames = () => {
   const scrollRef = useRef(null);
   const dateScrollRef = useRef(null);
   const lastSevenDays = getLastSevenDays();
+  const [selectedSportsbook, setSelectedSportsbook] = useState('draftkings');
 
   // Function to get games based on selected date
   const getGamesByDate = (date) => {
@@ -717,6 +1082,47 @@ const ActiveGames = () => {
         ))}
       </HStack>
     );
+  };
+
+  // Add this before the betting information grid
+  const renderSportsbookSelector = () => (
+    <ButtonGroup spacing={4} mb={6} justifyContent="center" width="full">
+      {Object.entries(SPORTSBOOKS).map(([key, book]) => {
+        // Create a mapping for the sportsbook keys to match the data structure
+        const keyMapping = {
+          DRAFTKINGS: 'draftkings',
+          FANDUEL: 'fanduel',
+          ESPNBET: 'espnBet'
+        };
+        
+        return (
+          <Button
+            key={key}
+            onClick={() => setSelectedSportsbook(keyMapping[key])}
+            variant={selectedSportsbook === keyMapping[key] ? "solid" : "outline"}
+            colorScheme="gray"
+            size="lg"
+            p={4}
+            _hover={{ bg: "gray.700" }}
+            isActive={selectedSportsbook === keyMapping[key]}
+          >
+            <Image
+              src={book.logo}
+              alt={book.name}
+              boxSize="24px"
+              mr={2}
+              fallbackSrc="https://via.placeholder.com/24"
+            />
+            {book.name}
+          </Button>
+        );
+      })}
+    </ButtonGroup>
+  );
+
+  // Update the betting information section to use selected sportsbook
+  const getSelectedOdds = (game) => {
+    return game.odds[selectedSportsbook];
   };
 
   return (
@@ -846,11 +1252,13 @@ const ActiveGames = () => {
               >
                 <Flex justify="space-between" mb={2}>
                   {game.isLive ? (
-                    <Badge colorScheme="green" variant="solid" px={2}>LIVE</Badge>
+                    <>
+                      <Badge colorScheme="green" variant="solid" px={2}>LIVE</Badge>
+                      <Text color="gray.300" fontSize="sm">{game.quarter}</Text>
+                    </>
                   ) : (
-                    <Badge colorScheme="gray" variant="solid" px={2}>FINAL</Badge>
+                    <Text color="gray.300" fontSize="sm">Upcoming</Text>
                   )}
-                  <Text color="gray.300" fontSize="sm">{game.quarter}</Text>
                 </Flex>
                 
                 <Flex justify="space-between" align="center" mb={2}>
@@ -864,7 +1272,9 @@ const ActiveGames = () => {
                     />
                     <Text color="white" fontWeight="bold">{game.awayTeam}</Text>
                   </Flex>
-                  <Text color="yellow.400" fontWeight="bold">{game.awayScore}</Text>
+                  {game.isLive && (
+                    <Text color="yellow.400" fontWeight="bold">{game.awayScore}</Text>
+                  )}
                 </Flex>
                 
                 <Flex justify="space-between" align="center">
@@ -878,12 +1288,10 @@ const ActiveGames = () => {
                     />
                     <Text color="white" fontWeight="bold">{game.homeTeam}</Text>
                   </Flex>
-                  <Text color="yellow.400" fontWeight="bold">{game.homeScore}</Text>
+                  {game.isLive && (
+                    <Text color="yellow.400" fontWeight="bold">{game.homeScore}</Text>
+                  )}
                 </Flex>
-                
-                <Text color="gray.400" fontSize="sm" textAlign="right" mt={2}>
-                  {game.time} left
-                </Text>
               </Box>
             ))}
           </Flex>
@@ -918,9 +1326,11 @@ const ActiveGames = () => {
         >
           <Flex justify="space-between" align="center" mb={6}>
             <Heading size="md" color="white">Game Details</Heading>
-            <Badge colorScheme="green" fontSize="md" py={1} px={3}>
-              LIVE: {selectedGame.quarter} - {selectedGame.time}
-            </Badge>
+            {selectedGame.isLive && (
+              <Badge colorScheme="green" fontSize="md" py={1} px={3}>
+                LIVE: {selectedGame.quarter} - {selectedGame.time}
+              </Badge>
+            )}
           </Flex>
 
           {/* Teams and Scores */}
@@ -944,7 +1354,9 @@ const ActiveGames = () => {
                 />
                 <Text color="white" fontWeight="bold" fontSize="xl">{selectedGame.awayTeam}</Text>
               </Flex>
-              <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.awayScore}</Text>
+              {selectedGame.isLive && (
+                <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.awayScore}</Text>
+              )}
               {renderForm(selectedGame.awayForm)}
             </VStack>
             
@@ -964,14 +1376,21 @@ const ActiveGames = () => {
                   alt={getTeamCode(selectedGame.homeTeam)}
                 />
               </Flex>
-              <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.homeScore}</Text>
+              {selectedGame.isLive && (
+                <Text color="yellow.400" fontSize="2xl" fontWeight="bold">{selectedGame.homeScore}</Text>
+              )}
               <HStack justify="flex-end" w="full">
                 {renderForm(selectedGame.homeForm)}
               </HStack>
             </VStack>
           </Flex>
 
-          {/* Betting Information */}
+          {/* Moved Sportsbook Selector here */}
+          <Box mb={6}>
+            {renderSportsbookSelector()}
+          </Box>
+
+          {/* Betting Information Grid */}
           <Grid templateColumns="repeat(3, 1fr)" gap={4}>
             <GridItem>
               <Box bg="gray.900" p={4} borderRadius="md" height="full" borderLeftWidth="2px" borderLeftColor="blue.400">
@@ -987,7 +1406,7 @@ const ActiveGames = () => {
                       alt={getTeamCode(selectedGame.awayTeam)}
                     />
                     <Text color="white" mr={2}>{selectedGame.awayTeam}</Text>
-                    {selectedGame.moneyline.pick === getTeamCode(selectedGame.awayTeam) && (
+                    {getSelectedOdds(selectedGame).moneyline.pick === getTeamCode(selectedGame.awayTeam) && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -999,10 +1418,10 @@ const ActiveGames = () => {
                     )}
                   </Flex>
                   <Text 
-                    color={selectedGame.moneyline.away > 0 ? "green.400" : "red.400"}
+                    color={getSelectedOdds(selectedGame).moneyline.away > 0 ? "green.400" : "red.400"}
                     fontWeight="bold"
                   >
-                    {formatMoneyline(selectedGame.moneyline.away)}
+                    {formatMoneyline(getSelectedOdds(selectedGame).moneyline.away)}
                   </Text>
                 </Flex>
                 <Flex justify="space-between">
@@ -1015,7 +1434,7 @@ const ActiveGames = () => {
                       alt={getTeamCode(selectedGame.homeTeam)}
                     />
                     <Text color="white" mr={2}>{selectedGame.homeTeam}</Text>
-                    {selectedGame.moneyline.pick === getTeamCode(selectedGame.homeTeam) && (
+                    {getSelectedOdds(selectedGame).moneyline.pick === getTeamCode(selectedGame.homeTeam) && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -1027,10 +1446,10 @@ const ActiveGames = () => {
                     )}
                   </Flex>
                   <Text 
-                    color={selectedGame.moneyline.home > 0 ? "green.400" : "red.400"}
+                    color={getSelectedOdds(selectedGame).moneyline.home > 0 ? "green.400" : "red.400"}
                     fontWeight="bold"
                   >
-                    {formatMoneyline(selectedGame.moneyline.home)}
+                    {formatMoneyline(getSelectedOdds(selectedGame).moneyline.home)}
                   </Text>
                 </Flex>
               </Box>
@@ -1050,7 +1469,7 @@ const ActiveGames = () => {
                       alt={getTeamCode(selectedGame.awayTeam)}
                     />
                     <Text color="white" mr={2}>{selectedGame.awayTeam}</Text>
-                    {selectedGame.spread.pick === getTeamCode(selectedGame.awayTeam) && (
+                    {getSelectedOdds(selectedGame).spread.pick === getTeamCode(selectedGame.awayTeam) && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -1062,9 +1481,9 @@ const ActiveGames = () => {
                     )}
                   </Flex>
                   <Text color="white" fontWeight="bold">
-                    {selectedGame.spread.favorite === getTeamCode(selectedGame.awayTeam) 
-                      ? `-${selectedGame.spread.points}` 
-                      : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
+                    {getSelectedOdds(selectedGame).spread.favorite === getTeamCode(selectedGame.awayTeam) 
+                      ? `-${getSelectedOdds(selectedGame).spread.points}` 
+                      : `+${getSelectedOdds(selectedGame).spread.points}`} ({getSelectedOdds(selectedGame).spread.odds})
                   </Text>
                 </Flex>
                 <Flex justify="space-between">
@@ -1077,7 +1496,7 @@ const ActiveGames = () => {
                       alt={getTeamCode(selectedGame.homeTeam)}
                     />
                     <Text color="white" mr={2}>{selectedGame.homeTeam}</Text>
-                    {selectedGame.spread.pick === getTeamCode(selectedGame.homeTeam) && (
+                    {getSelectedOdds(selectedGame).spread.pick === getTeamCode(selectedGame.homeTeam) && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -1089,9 +1508,9 @@ const ActiveGames = () => {
                     )}
                   </Flex>
                   <Text color="white" fontWeight="bold">
-                    {selectedGame.spread.favorite === getTeamCode(selectedGame.homeTeam) 
-                      ? `-${selectedGame.spread.points}` 
-                      : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
+                    {getSelectedOdds(selectedGame).spread.favorite === getTeamCode(selectedGame.homeTeam) 
+                      ? `-${getSelectedOdds(selectedGame).spread.points}` 
+                      : `+${getSelectedOdds(selectedGame).spread.points}`} ({getSelectedOdds(selectedGame).spread.odds})
                   </Text>
                 </Flex>
               </Box>
@@ -1103,8 +1522,8 @@ const ActiveGames = () => {
                 <Divider mb={3} opacity={0.1} />
                 <Flex justify="space-between" mb={2}>
                   <Flex align="center">
-                    <Text color="white" mr={2}>Over {selectedGame.total.value}</Text>
-                    {selectedGame.total.pick === "OVER" && (
+                    <Text color="white" mr={2}>Over {getSelectedOdds(selectedGame).total.value}</Text>
+                    {getSelectedOdds(selectedGame).total.pick === "OVER" && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -1115,12 +1534,12 @@ const ActiveGames = () => {
                       </Badge>
                     )}
                   </Flex>
-                  <Text color="white" fontWeight="bold">{selectedGame.total.overOdds}</Text>
+                  <Text color="white" fontWeight="bold">{getSelectedOdds(selectedGame).total.overOdds}</Text>
                 </Flex>
                 <Flex justify="space-between">
                   <Flex align="center">
-                    <Text color="white" mr={2}>Under {selectedGame.total.value}</Text>
-                    {selectedGame.total.pick === "UNDER" && (
+                    <Text color="white" mr={2}>Under {getSelectedOdds(selectedGame).total.value}</Text>
+                    {getSelectedOdds(selectedGame).total.pick === "UNDER" && (
                       <Badge 
                         bg="yellow.300" 
                         color="gray.800" 
@@ -1131,7 +1550,7 @@ const ActiveGames = () => {
                       </Badge>
                     )}
                   </Flex>
-                  <Text color="white" fontWeight="bold">{selectedGame.total.underOdds}</Text>
+                  <Text color="white" fontWeight="bold">{getSelectedOdds(selectedGame).total.underOdds}</Text>
                 </Flex>
               </Box>
             </GridItem>
