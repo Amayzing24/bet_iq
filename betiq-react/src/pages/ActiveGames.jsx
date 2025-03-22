@@ -61,6 +61,8 @@ const getTeamCode = (teamName) => {
   return teamName.split(" ")[0];
 };
 
+const getRandomPrediction = () => Math.random() > 0.5;
+
 const ActiveGames = () => {
   // Sample active games data
   const activeGames = [
@@ -73,9 +75,23 @@ const ActiveGames = () => {
       time: "4:11",
       quarter: "2ND QUARTER",
       isLive: true,
-      spread: { favorite: "IND", points: 15.5, odds: -115 },
-      total: { value: 221.5, overOdds: -115, underOdds: -115 },
-      moneyline: { home: +1100, away: -2500 },
+      spread: { 
+        favorite: "IND", 
+        points: 15.5, 
+        odds: -115,
+        pick: "IND"
+      },
+      total: { 
+        value: 221.5, 
+        overOdds: -115, 
+        underOdds: -115,
+        pick: "UNDER"
+      },
+      moneyline: { 
+        home: +1100, 
+        away: -2500,
+        pick: "IND"
+      },
       homeForm: ["L", "W", "L", "L", "W"],
       awayForm: ["W", "W", "W", "L", "W"]
     },
@@ -367,16 +383,24 @@ const ActiveGames = () => {
                       fallbackSrc="https://via.placeholder.com/20"
                       alt={getTeamCode(selectedGame.awayTeam)}
                     />
-                    <Text color="white">{selectedGame.awayTeam}</Text>
+                    <Text color="white" mr={2}>{selectedGame.awayTeam}</Text>
+                    {selectedGame.moneyline.pick === getTeamCode(selectedGame.awayTeam) && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
                   </Flex>
-                  <Tooltip label="Betting odds" placement="top">
-                    <Text 
-                      color={selectedGame.moneyline.away > 0 ? "green.400" : "red.400"}
-                      fontWeight="bold"
-                    >
-                      {formatMoneyline(selectedGame.moneyline.away)}
-                    </Text>
-                  </Tooltip>
+                  <Text 
+                    color={selectedGame.moneyline.away > 0 ? "green.400" : "red.400"}
+                    fontWeight="bold"
+                  >
+                    {formatMoneyline(selectedGame.moneyline.away)}
+                  </Text>
                 </Flex>
                 <Flex justify="space-between">
                   <Flex align="center">
@@ -387,16 +411,24 @@ const ActiveGames = () => {
                       fallbackSrc="https://via.placeholder.com/20"
                       alt={getTeamCode(selectedGame.homeTeam)}
                     />
-                    <Text color="white">{selectedGame.homeTeam}</Text>
+                    <Text color="white" mr={2}>{selectedGame.homeTeam}</Text>
+                    {selectedGame.moneyline.pick === getTeamCode(selectedGame.homeTeam) && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
                   </Flex>
-                  <Tooltip label="Betting odds" placement="top">
-                    <Text 
-                      color={selectedGame.moneyline.home > 0 ? "green.400" : "red.400"}
-                      fontWeight="bold"
-                    >
-                      {formatMoneyline(selectedGame.moneyline.home)}
-                    </Text>
-                  </Tooltip>
+                  <Text 
+                    color={selectedGame.moneyline.home > 0 ? "green.400" : "red.400"}
+                    fontWeight="bold"
+                  >
+                    {formatMoneyline(selectedGame.moneyline.home)}
+                  </Text>
                 </Flex>
               </Box>
             </GridItem>
@@ -414,17 +446,23 @@ const ActiveGames = () => {
                       fallbackSrc="https://via.placeholder.com/20"
                       alt={getTeamCode(selectedGame.awayTeam)}
                     />
-                    <Text color="white">
-                      {selectedGame.awayTeam}
-                    </Text>
+                    <Text color="white" mr={2}>{selectedGame.awayTeam}</Text>
+                    {selectedGame.spread.pick === getTeamCode(selectedGame.awayTeam) && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
                   </Flex>
-                  <Tooltip label="Point spread and odds" placement="top">
-                    <Text color="white" fontWeight="bold">
-                      {selectedGame.spread.favorite === getTeamCode(selectedGame.awayTeam) 
-                        ? `-${selectedGame.spread.points}` 
-                        : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
-                    </Text>
-                  </Tooltip>
+                  <Text color="white" fontWeight="bold">
+                    {selectedGame.spread.favorite === getTeamCode(selectedGame.awayTeam) 
+                      ? `-${selectedGame.spread.points}` 
+                      : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
+                  </Text>
                 </Flex>
                 <Flex justify="space-between">
                   <Flex align="center">
@@ -435,17 +473,23 @@ const ActiveGames = () => {
                       fallbackSrc="https://via.placeholder.com/20"
                       alt={getTeamCode(selectedGame.homeTeam)}
                     />
-                    <Text color="white">
-                      {selectedGame.homeTeam}
-                    </Text>
+                    <Text color="white" mr={2}>{selectedGame.homeTeam}</Text>
+                    {selectedGame.spread.pick === getTeamCode(selectedGame.homeTeam) && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
                   </Flex>
-                  <Tooltip label="Point spread and odds" placement="top">
-                    <Text color="white" fontWeight="bold">
-                      {selectedGame.spread.favorite === getTeamCode(selectedGame.homeTeam) 
-                        ? `-${selectedGame.spread.points}` 
-                        : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
-                    </Text>
-                  </Tooltip>
+                  <Text color="white" fontWeight="bold">
+                    {selectedGame.spread.favorite === getTeamCode(selectedGame.homeTeam) 
+                      ? `-${selectedGame.spread.points}` 
+                      : `+${selectedGame.spread.points}`} ({selectedGame.spread.odds})
+                  </Text>
                 </Flex>
               </Box>
             </GridItem>
@@ -455,15 +499,35 @@ const ActiveGames = () => {
                 <Text color="cyan.400" fontWeight="bold" mb={3}>Total</Text>
                 <Divider mb={3} opacity={0.1} />
                 <Flex justify="space-between" mb={2}>
-                  <Tooltip label="Over/Under" placement="top">
-                    <Text color="white">Over {selectedGame.total.value}</Text>
-                  </Tooltip>
+                  <Flex align="center">
+                    <Text color="white" mr={2}>Over {selectedGame.total.value}</Text>
+                    {selectedGame.total.pick === "OVER" && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
+                  </Flex>
                   <Text color="white" fontWeight="bold">{selectedGame.total.overOdds}</Text>
                 </Flex>
                 <Flex justify="space-between">
-                  <Tooltip label="Over/Under" placement="top">
-                    <Text color="white">Under {selectedGame.total.value}</Text>
-                  </Tooltip>
+                  <Flex align="center">
+                    <Text color="white" mr={2}>Under {selectedGame.total.value}</Text>
+                    {selectedGame.total.pick === "UNDER" && (
+                      <Badge 
+                        bg="yellow.300" 
+                        color="gray.800" 
+                        variant="solid" 
+                        px={2}
+                      >
+                        BetIQ Pick
+                      </Badge>
+                    )}
+                  </Flex>
                   <Text color="white" fontWeight="bold">{selectedGame.total.underOdds}</Text>
                 </Flex>
               </Box>
