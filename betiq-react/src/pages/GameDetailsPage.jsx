@@ -2,6 +2,7 @@ import React from "react"
 import { useParams } from "react-router-dom"
 import { yesterdaysGames } from "../data/sampleData"
 import { Box, Heading, Text, Badge, VStack } from "@chakra-ui/react"
+import GameNews from "../components/GameNews"
 
 export default function GameDetailsPage() {
   const { gameId } = useParams()
@@ -16,35 +17,41 @@ export default function GameDetailsPage() {
   }
 
   return (
-    <Box maxW="container.md" mx="auto" bg="gray.800" p={6} borderRadius="md" mt={8}>
-      <Heading mb={2}>{game.homeTeam} vs {game.awayTeam}</Heading>
-      <Text mb={4} fontSize="sm">Final Score: {game.finalScore}</Text>
-      <VStack align="start" spacing={2}>
-        <Text>
-          <Text as="span" fontWeight="bold">Moneyline:</Text> {game.moneyline.label}{' '}
-          {game.moneyline.correct ? (
-            <Badge colorScheme="green" ml={1}>Correct</Badge>
-          ) : (
-            <Badge colorScheme="red" ml={1}>Incorrect</Badge>
-          )}
-        </Text>
-        <Text>
-          <Text as="span" fontWeight="bold">Over/Under:</Text> {game.overUnder.label}{' '}
-          {game.overUnder.correct ? (
-            <Badge colorScheme="green" ml={1}>Correct</Badge>
-          ) : (
-            <Badge colorScheme="red" ml={1}>Incorrect</Badge>
-          )}
-        </Text>
-        <Text>
-          <Text as="span" fontWeight="bold">Spread:</Text> {game.spread.label}{' '}
-          {game.spread.correct ? (
-            <Badge colorScheme="green" ml={1}>Correct</Badge>
-          ) : (
-            <Badge colorScheme="red" ml={1}>Incorrect</Badge>
-          )}
-        </Text>
-      </VStack>
+    <Box maxW="container.lg" mx="auto" mb={16}>
+      {/* Game details box */}
+      <Box bg="gray.800" p={6} borderRadius="md" mt={8} mb={8} boxShadow="lg">
+        <Heading mb={2}>{game.homeTeam} vs {game.awayTeam}</Heading>
+        <Text mb={4} fontSize="sm">Final Score: {game.finalScore}</Text>
+        <VStack align="start" spacing={2}>
+          <Text>
+            <Text as="span" fontWeight="bold">Moneyline:</Text> {game.moneyline.label}{' '}
+            {game.moneyline.correct ? (
+              <Badge colorScheme="green" ml={1}>Correct</Badge>
+            ) : (
+              <Badge colorScheme="red" ml={1}>Incorrect</Badge>
+            )}
+          </Text>
+          <Text>
+            <Text as="span" fontWeight="bold">Over/Under:</Text> {game.overUnder.label}{' '}
+            {game.overUnder.correct ? (
+              <Badge colorScheme="green" ml={1}>Correct</Badge>
+            ) : (
+              <Badge colorScheme="red" ml={1}>Incorrect</Badge>
+            )}
+          </Text>
+          <Text>
+            <Text as="span" fontWeight="bold">Spread:</Text> {game.spread.label}{' '}
+            {game.spread.correct ? (
+              <Badge colorScheme="green" ml={1}>Correct</Badge>
+            ) : (
+              <Badge colorScheme="red" ml={1}>Incorrect</Badge>
+            )}
+          </Text>
+        </VStack>
+      </Box>
+      
+      {/* News about this specific game */}
+      <GameNews homeTeam={game.homeTeam} awayTeam={game.awayTeam} />
     </Box>
   )
 }
