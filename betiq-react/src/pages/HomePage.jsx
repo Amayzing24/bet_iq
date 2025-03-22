@@ -1,5 +1,17 @@
 import React from "react"
-import { Container, Heading, SimpleGrid, Box, VStack, useColorModeValue } from "@chakra-ui/react"
+import { 
+  Container, 
+  Heading, 
+  SimpleGrid, 
+  Box, 
+  VStack, 
+  useColorModeValue,
+  Tabs,
+  TabList,
+  Tab,
+  Link
+} from "@chakra-ui/react"
+import { Link as RouterLink } from "react-router-dom"
 import { yesterdaysGames, todaysGames, news, modelProfitData } from "../data/sampleData"
 import GameCard from "../components/GameCard"
 import InfoPopup from "../components/InfoPopup"
@@ -14,7 +26,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js"
-
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 export default function HomePage() {
@@ -22,7 +33,9 @@ export default function HomePage() {
   const newsItemBg = useColorModeValue("gray.50", "gray.700")
   const chartTextColor = useColorModeValue("#1A202C", "#FFFFFF")
   const headerColor = useColorModeValue("gray.800", "white")
-
+  const tabBg = useColorModeValue("gray.100", "gray.700")
+  const activeTabBg = useColorModeValue("blue.50", "blue.900")
+  
   const chartData = {
     labels: modelProfitData.labels,
     datasets: [
@@ -36,7 +49,7 @@ export default function HomePage() {
       },
     ],
   }
-
+  
   const chartOptions = {
     responsive: true,
     scales: {
@@ -49,17 +62,29 @@ export default function HomePage() {
       },
     },
   }
-
+  
   return (
     <Container maxW="container.xl" py={8}>
       <VStack spacing={4} mb={6}>
         <Heading size="lg" textAlign="center" color={headerColor}>BetIQ</Heading>
+        
+        <Tabs variant="soft-rounded" colorScheme="blue" width="100%">
+          <TabList justifyContent="center" mb={4}>
+            <Tab _selected={{ bg: activeTabBg }}>Home</Tab>
+            <Tab _selected={{ bg: activeTabBg }}>
+              <Link as={RouterLink} to="/active-games" _hover={{ textDecoration: 'none' }}>
+                Active Games
+              </Link>
+            </Tab>
+          </TabList>
+        </Tabs>
+        
         <InfoPopup
           title="What is moneyline, over/under, and spread?"
           description="Moneyline: which team will win. Over/Under: total points. Spread: margin of victory or defeat."
         />
       </VStack>
-
+      
       <SimpleGrid columns={[1, null, 3]} spacing={8}>
         <Box borderRadius="md" p={4} bg={bgColor} boxShadow="md">
           <Heading size="md" textAlign="center" mb={4}>Yesterday&apos;s Games</Heading>
@@ -67,14 +92,12 @@ export default function HomePage() {
             <GameCard key={game.id} game={game} isYesterday />
           ))}
         </Box>
-
         <Box borderRadius="md" p={4} bg={bgColor} boxShadow="md">
           <Heading size="md" textAlign="center" mb={4}>Today&apos;s Games</Heading>
           {todaysGames.map((game) => (
             <GameCard key={game.id} game={game} isYesterday={false} />
           ))}
         </Box>
-
         <Box borderRadius="md" p={4} bg={bgColor} boxShadow="md">
           <Heading size="md" textAlign="center" mb={4}>NBA News</Heading>
           {news.map((item, i) => (

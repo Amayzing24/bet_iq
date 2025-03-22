@@ -6,6 +6,7 @@ import TodaysDetailsPage from "../pages/TodaysDetailsPage";
 import RiskIQPage from "../pages/RiskIQPage";
 import LoginPage from "../pages/LoginPage";
 import CreateAccountPage from "../pages/CreateAccount";
+import ActiveGames from "../pages/ActiveGames";
 
 function PrivateRoute({ children }) {
   return children; // Always render the children components without authentication
@@ -20,6 +21,7 @@ export default function AppRouter() {
       {/* Login and Create Account Pages are accessible */}
       <Route path="/login" element={<LoginPage />} />
       <Route path="/create-account" element={<CreateAccountPage />} />
+      <Route path="/active-games" element={<ActiveGames />} />
 
       {/* Protected Routes (Now always accessible) */}
       <Route path="/home" element={<HomePage />} />
