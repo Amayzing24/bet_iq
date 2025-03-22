@@ -582,7 +582,7 @@ const ActiveGames = () => {
 
   // Add this before the betting information grid
   const renderSportsbookSelector = () => (
-    <ButtonGroup spacing={4} mb={6} justifyContent="center" width="full">
+    <ButtonGroup spacing={4} mb={3} justifyContent="center" width="full">
       {Object.entries(SPORTSBOOKS).map(([key, book]) => {
         // Create a mapping for the sportsbook keys to match the data structure
         const keyMapping = {
@@ -882,7 +882,7 @@ const ActiveGames = () => {
           </Flex>
 
           {/* Moved Sportsbook Selector here */}
-          <Box mb={6}>
+          <Box mb={3}>
             {renderSportsbookSelector()}
           </Box>
 
