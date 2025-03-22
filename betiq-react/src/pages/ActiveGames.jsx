@@ -528,13 +528,516 @@ const ActiveGames = () => {
       awayForm: ["L", "L", "W", "L", "W"]
     }
   ];
+  
+  const yesterdayGames = [
+    {
+      id: 6,
+      homeTeam: "CLE Cavaliers",
+      awayTeam: "CHI Bulls",
+      homeScore: 112,
+      awayScore: 105,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "CLE", points: 6.5, odds: -110 },
+      total: { value: 219.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -250, away: +200 },
+      homeForm: ["W", "L", "W", "W", "L"],
+      awayForm: ["L", "L", "W", "L", "W"]
+    },
+    {
+      id: 7,
+      homeTeam: "OKC Thunder",
+      awayTeam: "MEM Grizzlies",
+      homeScore: 128,
+      awayScore: 115,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "OKC", points: 8.5, odds: -110 },
+      total: { value: 230.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -380, away: +290 },
+      homeForm: ["W", "W", "W", "W", "L"],
+      awayForm: ["L", "W", "L", "L", "L"]
+    },
+    {
+      id: 8,
+      homeTeam: "TOR Raptors",
+      awayTeam: "ATL Hawks",
+      homeScore: 98,
+      awayScore: 119,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "ATL", points: 5.5, odds: -110 },
+      total: { value: 226.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +190, away: -230 },
+      homeForm: ["L", "L", "L", "W", "L"],
+      awayForm: ["W", "L", "W", "W", "W"]
+    },
+    {
+      id: 9,
+      homeTeam: "MIN Timberwolves",
+      awayTeam: "DET Pistons",
+      homeScore: 126,
+      awayScore: 103,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "MIN", points: 10.5, odds: -110 },
+      total: { value: 227.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -500, away: +380 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["L", "L", "L", "L", "W"]
+    },
+    {
+      id: 10,
+      homeTeam: "SAS Spurs",
+      awayTeam: "WAS Wizards",
+      homeScore: 118,
+      awayScore: 105,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "SAS", points: 7, odds: -110 },
+      total: { value: 229.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -275, away: +220 },
+      homeForm: ["W", "L", "L", "W", "L"],
+      awayForm: ["L", "L", "L", "L", "W"]
+    }
+  ];
+  
+  const twoDaysAgoGames = [
+    {
+      id: 11,
+      homeTeam: "UTA Jazz",
+      awayTeam: "SAC Kings",
+      homeScore: 107,
+      awayScore: 123,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "SAC", points: 7.5, odds: -110 },
+      total: { value: 228.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +260, away: -320 },
+      homeForm: ["L", "L", "W", "L", "L"],
+      awayForm: ["W", "W", "L", "W", "W"]
+    },
+    {
+      id: 12,
+      homeTeam: "NYK Knicks",
+      awayTeam: "PHI 76ers",
+      homeScore: 114,
+      awayScore: 102,
+      time: "FINAL",
+      quarter: "GAME OVER", 
+      isLive: false,
+      spread: { favorite: "NYK", points: 4.5, odds: -110 },
+      total: { value: 215.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -180, away: +150 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["L", "W", "L", "W", "L"]
+    },
+    {
+      id: 13,
+      homeTeam: "MIL Bucks",
+      awayTeam: "CHA Hornets",
+      homeScore: 131,
+      awayScore: 115,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "MIL", points: 9.5, odds: -110 },
+      total: { value: 230.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -450, away: +340 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["L", "W", "L", "L", "L"]
+    },
+    {
+      id: 14,
+      homeTeam: "NOP Pelicans",
+      awayTeam: "HOU Rockets",
+      homeScore: 115,
+      awayScore: 110,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "NOP", points: 3.5, odds: -110 },
+      total: { value: 222.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -165, away: +140 },
+      homeForm: ["W", "L", "W", "W", "L"],
+      awayForm: ["W", "L", "W", "L", "L"]
+    },
+    {
+      id: 15,
+      homeTeam: "ORL Magic",
+      awayTeam: "CLE Cavaliers",
+      homeScore: 109,
+      awayScore: 118,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "CLE", points: 2.5, odds: -110 },
+      total: { value: 218.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +120, away: -140 },
+      homeForm: ["L", "W", "W", "L", "W"],
+      awayForm: ["W", "L", "W", "W", "L"]
+    }
+  ];
+  
+  const threeDaysAgoGames = [
+    {
+      id: 16,
+      homeTeam: "LAC Clippers",
+      awayTeam: "DEN Nuggets",
+      homeScore: 112,
+      awayScore: 119,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "DEN", points: 3.5, odds: -110 },
+      total: { value: 226.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +145, away: -170 },
+      homeForm: ["L", "W", "W", "L", "W"],
+      awayForm: ["W", "W", "W", "L", "W"]
+    },
+    {
+      id: 17,
+      homeTeam: "GSW Warriors",
+      awayTeam: "POR Trail Blazers",
+      homeScore: 131,
+      awayScore: 109,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "GSW", points: 11.5, odds: -110 },
+      total: { value: 233.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -600, away: +450 },
+      homeForm: ["W", "L", "W", "L", "W"],
+      awayForm: ["L", "L", "L", "W", "L"]
+    },
+    {
+      id: 18,
+      homeTeam: "BKN Nets",
+      awayTeam: "ATL Hawks",
+      homeScore: 98,
+      awayScore: 104,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "ATL", points: 5, odds: -110 },
+      total: { value: 224.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +180, away: -220 },
+      homeForm: ["L", "W", "L", "L", "W"],
+      awayForm: ["W", "L", "W", "W", "W"]
+    },
+    {
+      id: 19,
+      homeTeam: "IND Pacers",
+      awayTeam: "MIA Heat",
+      homeScore: 122,
+      awayScore: 115,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "IND", points: 4, odds: -110 },
+      total: { value: 230.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -175, away: +145 },
+      homeForm: ["W", "W", "W", "L", "W"],
+      awayForm: ["L", "L", "W", "W", "L"]
+    },
+    {
+      id: 20,
+      homeTeam: "BOS Celtics",
+      awayTeam: "TOR Raptors",
+      homeScore: 126,
+      awayScore: 107,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "BOS", points: 12, odds: -110 },
+      total: { value: 229.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -650, away: +475 },
+      homeForm: ["W", "W", "W", "W", "L"],
+      awayForm: ["L", "L", "L", "W", "L"]
+    }
+  ];
+  
+  const fourDaysAgoGames = [
+    {
+      id: 21,
+      homeTeam: "PHX Suns",
+      awayTeam: "DAL Mavericks",
+      homeScore: 115,
+      awayScore: 120,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "DAL", points: 1.5, odds: -110 },
+      total: { value: 235.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +105, away: -125 },
+      homeForm: ["L", "W", "L", "W", "L"],
+      awayForm: ["W", "W", "L", "L", "W"]
+    },
+    {
+      id: 22,
+      homeTeam: "CHI Bulls",
+      awayTeam: "DET Pistons",
+      homeScore: 121,
+      awayScore: 113,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "CHI", points: 7, odds: -110 },
+      total: { value: 225.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -300, away: +240 },
+      homeForm: ["L", "L", "W", "L", "W"],
+      awayForm: ["L", "L", "L", "L", "W"]
+    },
+    {
+      id: 23,
+      homeTeam: "HOU Rockets",
+      awayTeam: "OKC Thunder",
+      homeScore: 105,
+      awayScore: 119,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "OKC", points: 6.5, odds: -110 },
+      total: { value: 227.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +220, away: -270 },
+      homeForm: ["W", "L", "W", "L", "L"],
+      awayForm: ["W", "W", "W", "W", "L"]
+    },
+    {
+      id: 24,
+      homeTeam: "MEM Grizzlies",
+      awayTeam: "SAS Spurs",
+      homeScore: 109,
+      awayScore: 115,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "SAS", points: 2, odds: -110 },
+      total: { value: 221.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +115, away: -135 },
+      homeForm: ["L", "W", "L", "L", "L"],
+      awayForm: ["W", "L", "L", "W", "L"]
+    },
+    {
+      id: 25,
+      homeTeam: "WAS Wizards",
+      awayTeam: "ORL Magic",
+      homeScore: 102,
+      awayScore: 114,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "ORL", points: 8, odds: -110 },
+      total: { value: 222.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +290, away: -360 },
+      homeForm: ["L", "L", "L", "L", "W"],
+      awayForm: ["L", "W", "W", "L", "W"]
+    }
+  ];
+  
+  const fiveDaysAgoGames = [
+    {
+      id: 26,
+      homeTeam: "MIN Timberwolves",
+      awayTeam: "LAL Lakers",
+      homeScore: 127,
+      awayScore: 117,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "MIN", points: 5, odds: -110 },
+      total: { value: 233.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -200, away: +170 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["W", "W", "W", "L", "W"]
+    },
+    {
+      id: 27,
+      homeTeam: "SAC Kings",
+      awayTeam: "LAC Clippers",
+      homeScore: 118,
+      awayScore: 111,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "SAC", points: 3, odds: -110 },
+      total: { value: 226.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -150, away: +125 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["L", "W", "W", "L", "W"]
+    },
+    {
+      id: 28,
+      homeTeam: "PHI 76ers",
+      awayTeam: "CHA Hornets",
+      homeScore: 124,
+      awayScore: 117,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "PHI", points: 8, odds: -110 },
+      total: { value: 228.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -360, away: +280 },
+      homeForm: ["L", "W", "L", "W", "L"],
+      awayForm: ["L", "W", "L", "L", "L"]
+    },
+    {
+      id: 29,
+      homeTeam: "ATL Hawks",
+      awayTeam: "MIL Bucks",
+      homeScore: 110,
+      awayScore: 124,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "MIL", points: 6, odds: -110 },
+      total: { value: 232.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +200, away: -240 },
+      homeForm: ["W", "L", "W", "W", "W"],
+      awayForm: ["W", "W", "L", "W", "W"]
+    },
+    {
+      id: 30,
+      homeTeam: "NYK Knicks",
+      awayTeam: "CLE Cavaliers",
+      homeScore: 119,
+      awayScore: 122,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "CLE", points: 1, odds: -110 },
+      total: { value: 219.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +100, away: -120 },
+      homeForm: ["W", "W", "L", "W", "W"],
+      awayForm: ["W", "L", "W", "W", "L"]
+    }
+  ];
+  
+  const sixDaysAgoGames = [
+    {
+      id: 31,
+      homeTeam: "POR Trail Blazers",
+      awayTeam: "UTA Jazz",
+      homeScore: 112,
+      awayScore: 103,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "POR", points: 1.5, odds: -110 },
+      total: { value: 220.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -125, away: +105 },
+      homeForm: ["L", "L", "L", "W", "L"],
+      awayForm: ["L", "L", "W", "L", "L"]
+    },
+    {
+      id: 32,
+      homeTeam: "DAL Mavericks",
+      awayTeam: "DEN Nuggets",
+      homeScore: 115,
+      awayScore: 121,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "DEN", points: 2, odds: -110 },
+      total: { value: 230.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +110, away: -130 },
+      homeForm: ["W", "W", "L", "L", "W"],
+      awayForm: ["W", "W", "W", "L", "W"]
+    },
+    {
+      id: 33,
+      homeTeam: "MIA Heat",
+      awayTeam: "BKN Nets",
+      homeScore: 112,
+      awayScore: 97,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "MIA", points: 7, odds: -110 },
+      total: { value: 217.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: -300, away: +240 },
+      homeForm: ["L", "L", "W", "W", "L"],
+      awayForm: ["L", "W", "L", "L", "W"]
+    },
+    {
+      id: 34,
+      homeTeam: "TOR Raptors",
+      awayTeam: "IND Pacers",
+      homeScore: 105,
+      awayScore: 123,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "IND", points: 8, odds: -110 },
+      total: { value: 231.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +280, away: -350 },
+      homeForm: ["L", "L", "L", "W", "L"],
+      awayForm: ["W", "W", "W", "L", "W"]
+    },
+    {
+      id: 35,
+      homeTeam: "DET Pistons",
+      awayTeam: "BOS Celtics",
+      homeScore: 98,
+      awayScore: 119,
+      time: "FINAL",
+      quarter: "GAME OVER",
+      isLive: false,
+      spread: { favorite: "BOS", points: 13.5, odds: -110 },
+      total: { value: 224.5, overOdds: -110, underOdds: -110 },
+      moneyline: { home: +700, away: -1100 },
+      homeForm: ["L", "L", "L", "L", "W"],
+      awayForm: ["W", "W", "W", "W", "L"]
+    }
+  ];
 
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [displayedGames, setDisplayedGames] = useState(activeGames);
   const scrollRef = useRef(null);
   const dateScrollRef = useRef(null);
   const lastSevenDays = getLastSevenDays();
   const [selectedSportsbook, setSelectedSportsbook] = useState('draftkings');
+
+  // Function to get games based on selected date
+  const getGamesByDate = (date) => {
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const twoDaysAgo = new Date(today);
+    twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+    const threeDaysAgo = new Date(today);
+    threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+    const fourDaysAgo = new Date(today);
+    fourDaysAgo.setDate(fourDaysAgo.getDate() - 4);
+    const fiveDaysAgo = new Date(today);
+    fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+    const sixDaysAgo = new Date(today);
+    sixDaysAgo.setDate(sixDaysAgo.getDate() - 6);
+
+    // Compare dates without time
+    const isSameDay = (date1, date2) => {
+      return date1.getDate() === date2.getDate() &&
+             date1.getMonth() === date2.getMonth() &&
+             date1.getFullYear() === date2.getFullYear();
+    };
+
+    if (isSameDay(date, today)) return activeGames;
+    if (isSameDay(date, yesterday)) return yesterdayGames;
+    if (isSameDay(date, twoDaysAgo)) return twoDaysAgoGames;
+    if (isSameDay(date, threeDaysAgo)) return threeDaysAgoGames;
+    if (isSameDay(date, fourDaysAgo)) return fourDaysAgoGames;
+    if (isSameDay(date, fiveDaysAgo)) return fiveDaysAgoGames;
+    if (isSameDay(date, sixDaysAgo)) return sixDaysAgoGames;
+    
+    return []; // Return empty array if no games found for the date
+  };
 
   const handleGameClick = (game) => {
     setSelectedGame(game);
@@ -542,7 +1045,8 @@ const ActiveGames = () => {
 
   const handleDateClick = (date) => {
     setSelectedDate(date.fullDate);
-    // In a real app, you would fetch games for this date
+    setDisplayedGames(getGamesByDate(date.fullDate));
+    setSelectedGame(null); // Reset selected game when changing dates
   };
 
   const scroll = (scrollOffset) => {
@@ -730,7 +1234,7 @@ const ActiveGames = () => {
               'msOverflowStyle': 'none',
             }}
           >
-            {activeGames.map((game) => (
+            {displayedGames.map((game) => (
               <Box
                 key={game.id}
                 minW="250px"
