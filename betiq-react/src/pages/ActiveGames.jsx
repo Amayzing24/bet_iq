@@ -61,6 +61,30 @@ const getTeamCode = (teamName) => {
   return teamName.split(" ")[0];
 };
 
+// Generate the last 7 days for date selector
+const getLastSevenDays = () => {
+  const days = [];
+  const today = new Date();
+  
+  for (let i = 6; i >= 0; i--) {
+    const date = new Date();
+    date.setDate(today.getDate() - i);
+    
+    // Format the date
+    const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+    const dayNumber = date.getDate();
+    const month = date.toLocaleDateString('en-US', { month: 'short' });
+    
+    days.push({
+      fullDate: date,
+      display: `${dayName}, ${month} ${dayNumber}`,
+      isToday: i === 0
+    });
+  }
+  
+  return days;
+};
+
 const ActiveGames = () => {
   // Sample active games data
   const activeGames = [
@@ -142,15 +166,29 @@ const ActiveGames = () => {
   ];
 
   const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const scrollRef = useRef(null);
+  const dateScrollRef = useRef(null);
+  const lastSevenDays = getLastSevenDays();
 
   const handleGameClick = (game) => {
     setSelectedGame(game);
   };
 
+  const handleDateClick = (date) => {
+    setSelectedDate(date.fullDate);
+    // In a real app, you would fetch games for this date
+  };
+
   const scroll = (scrollOffset) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: scrollOffset, behavior: 'smooth' });
+    }
+  };
+
+  const scrollDates = (scrollOffset) => {
+    if (dateScrollRef.current) {
+      dateScrollRef.current.scrollBy({ left: scrollOffset, behavior: 'smooth' });
     }
   };
 
@@ -181,6 +219,79 @@ const ActiveGames = () => {
     <Container maxW="container.xl" py={8}>
       <Box textAlign="center" mb={8}>
         <Heading size="lg" color="cyan.400" mb={6}>BetIQ</Heading>
+        
+        {/* Date Selector */}
+        <Box position="relative" w="full" mb={4}>
+          <IconButton
+            aria-label="Scroll dates left"
+            icon={<ChevronLeftIcon />}
+            position="absolute"
+            left={0}
+            top="50%"
+            transform="translateY(-50%)"
+            zIndex={2}
+            onClick={() => scrollDates(-300)}
+            bg="gray.800"
+            color="white"
+            _hover={{ bg: "gray.700" }}
+            size="md"
+          />
+          
+          <Flex
+            ref={dateScrollRef}
+            overflowX="auto"
+            py={2}
+            px={10}
+            css={{
+              '&::-webkit-scrollbar': {
+                display: 'none',
+              },
+              'scrollbarWidth': 'none',
+              'msOverflowStyle': 'none',
+            }}
+          >
+            {lastSevenDays.map((day, index) => (
+              <Box
+                key={index}
+                minW="150px"
+                mx={2}
+                p={3}
+                borderRadius="md"
+                bg={day.isToday ? "blue.900" : "gray.800"}
+                cursor="pointer"
+                onClick={() => handleDateClick(day)}
+                transition="all 0.2s"
+                _hover={{ bg: "gray.700" }}
+                boxShadow="md"
+                borderWidth="1px"
+                borderColor={day.isToday ? "cyan.400" : "transparent"}
+              >
+                <Text color="white" fontWeight={day.isToday ? "bold" : "normal"}>
+                  {day.display}
+                </Text>
+                {day.isToday && (
+                  <Badge colorScheme="cyan" mt={1}>Today</Badge>
+                )}
+              </Box>
+            ))}
+          </Flex>
+          
+          <IconButton
+            aria-label="Scroll dates right"
+            icon={<ChevronRightIcon />}
+            position="absolute"
+            right={0}
+            top="50%"
+            transform="translateY(-50%)"
+            zIndex={2}
+            onClick={() => scrollDates(300)}
+            bg="gray.800"
+            color="white"
+            _hover={{ bg: "gray.700" }}
+            size="md"
+          />
+        </Box>
+        
         <Heading size="md" color="white" mb={4}>Active Games</Heading>
         
         {/* Games Scroller */}
