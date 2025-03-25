@@ -17,7 +17,7 @@ export default function AppRouter() {
   return (
     <Routes>
       {/* Default route redirects to home */}
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<ActiveGames />} />
       
       {/* Login and Create Account Pages are accessible */}
       <Route path="/login" element={<LoginPage />} />
@@ -25,7 +25,7 @@ export default function AppRouter() {
       <Route path="/active-games" element={<ActiveGames />} />
 
       {/* Protected Routes (Now always accessible) */}
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/home" element={<ActiveGames />} />
       <Route path="/game/:gameId" element={<GameDetailsPage />} />
       <Route path="/today/:gameId" element={<TodaysDetailsPage />} />
       <Route path="/risk" element={<RiskIQPage />} />
