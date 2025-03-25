@@ -14,7 +14,7 @@ app.use(express.static(join(process.cwd(), 'dist')))
 // Existing News API endpoint
 app.get('/api/news', async (req, res) => {
   try {
-    const API_KEY = "25525051b0d1bac5fd19f9da79a161b3"
+    const API_KEY = "19c4ce7a36a47f94c7c56b4c092e405c"
     
     const { q, sortBy, language, pageSize } = req.query
 
