@@ -26,7 +26,7 @@
                 "moneyline": {
                     "home": 170,
                     "away": -205,
-                    "pick": "Atlanta Hawks"
+                    "pick": "Orlando Magic"
                 }
             },
             "fanduel": {
@@ -40,12 +40,12 @@
                     "value": 216.5,
                     "overOdds": -114,
                     "underOdds": -106,
-                    "pick": "OVER"
+                    "pick": "UNDER"
                 },
                 "moneyline": {
                     "home": 172,
                     "away": -205,
-                    "pick": "Atlanta Hawks"
+                    "pick": "Orlando Magic"
                 }
             }
         }
@@ -91,7 +91,7 @@
                     "value": 229,
                     "overOdds": -112,
                     "underOdds": -108,
-                    "pick": "OVER"
+                    "pick": "UNDER"
                 },
                 "moneyline": {
                     "home": -320,

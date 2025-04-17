@@ -123,7 +123,7 @@
                     "value": 214,
                     "overOdds": -110,
                     "underOdds": -110,
-                    "pick": "UNDER"
+                    "pick": "OVER"
                 },
                 "moneyline": {
                     "home": 220,
@@ -225,7 +225,7 @@
                     "value": 226.5,
                     "overOdds": -112,
                     "underOdds": -108,
-                    "pick": "OVER"
+                    "pick": "UNDER"
                 },
                 "moneyline": {
                     "home": 195,
@@ -276,7 +276,7 @@
                     "value": 224,
                     "overOdds": -110,
                     "underOdds": -110,
-                    "pick": "UNDER"
+                    "pick": "OVER"
                 },
                 "moneyline": {
                     "home": -298,

@@ -26,7 +26,7 @@
           "moneyline": {
             "home": 150,
             "away": -180,
-            "pick": "Atlanta Hawks"
+            "pick": "Orlando Magic"
           }
         },
         "fanduel": {
@@ -45,7 +45,7 @@
           "moneyline": {
             "home": 146,
             "away": -174,
-            "pick": "Atlanta Hawks"
+            "pick": "Orlando Magic"
           }
         }
       }
@@ -123,7 +123,7 @@
             "value": 240.5,
             "overOdds": -110,
             "underOdds": -110,
-            "pick": "UNDER"
+            "pick": "OVER"
           },
           "moneyline": {
             "home": 455,
@@ -270,18 +270,18 @@
             "favorite": "Brooklyn Nets",
             "points": 3,
             "odds": -105,
-            "pick": "Brooklyn Nets"
+            "pick": "New Orleans Pelicans"
           },
           "total": {
             "value": 214,
             "overOdds": -110,
             "underOdds": -110,
-            "pick": "UNDER"
+            "pick": "OVER"
           },
           "moneyline": {
             "home": -142,
             "away": 120,
-            "pick": "Brooklyn Nets"
+            "pick": "New Orleans Pelicans"
           }
         },
         "fanduel": {

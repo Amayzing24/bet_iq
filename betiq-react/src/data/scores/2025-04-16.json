@@ -63,10 +63,10 @@
         "odds": {
             "draftkings": {
                 "spread": {
-                    "favorite": "Sacramento Kings",
+                    "favorite": "Dallas Mavericks",
                     "points": 4.5,
                     "odds": -110,
-                    "pick": "Sacramento Kings"
+                    "pick": "Dallas Mavericks"
                 },
                 "total": {
                     "value": 215.5,
@@ -77,15 +77,15 @@
                 "moneyline": {
                     "home": 160,
                     "away": -192,
-                    "pick": "Dallas Mavericks"
+                    "pick": "Sacramento Kings"
                 }
             },
             "fanduel": {
                 "spread": {
-                    "favorite": "Sacramento Kings",
+                    "favorite": "Dallas Mavericks",
                     "points": 4.5,
                     "odds": -108,
-                    "pick": "Sacramento Kings"
+                    "pick": "Dallas Mavericks"
                 },
                 "total": {
                     "value": 216,
@@ -96,7 +96,7 @@
                 "moneyline": {
                     "home": 164,
                     "away": -196,
-                    "pick": "Dallas Mavericks"
+                    "pick": "Sacramento Kings"
                 }
             }
         }

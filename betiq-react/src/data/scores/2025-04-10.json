@@ -11,14 +11,14 @@
       "quarter": null,
       "odds": {
         "draftkings": {
-          "spread": { "favorite": "Indiana Pacers", "points": 9, "odds": -110, "pick": "Indiana Pacers" },
+          "spread": { "favorite": "Indiana Pacers", "points": 9, "odds": -110, "pick": "Cleveland Cavaliers" },
           "total": { "value": 232.5, "overOdds": -108, "underOdds": -112, "pick": "UNDER" },
-          "moneyline": { "home": 320, "away": -410, "pick": "Cleveland Cavaliers" }
+          "moneyline": { "home": 320, "away": -410, "pick": "Indiana Pacers" }
         },
         "fanduel": {
-          "spread": { "favorite": "Indiana Pacers", "points": 9, "odds": -108, "pick": "Indiana Pacers" },
+          "spread": { "favorite": "Indiana Pacers", "points": 9, "odds": -108, "pick": "Cleveland Cavaliers" },
           "total": { "value": 232.5, "overOdds": -110, "underOdds": -110, "pick": "UNDER" },
-          "moneyline": { "home": 300, "away": -375, "pick": "Cleveland Cavaliers" }
+          "moneyline": { "home": 300, "away": -375, "pick": "Indiana Pacers" }
         }
       }
     },
@@ -58,13 +58,13 @@
       "odds": {
         "draftkings": {
           "spread": { "favorite": "Atlanta Hawks", "points": 13.5, "odds": -110, "pick": "Atlanta Hawks" },
-          "total": { "value": 230.5, "overOdds": -110, "underOdds": -110, "pick": "UNDER" },
-          "moneyline": { "home": -850, "away": 575, "pick": "Brooklyn Nets" }
+          "total": { "value": 230.5, "overOdds": -110, "underOdds": -110, "pick": "OVER" },
+          "moneyline": { "home": -850, "away": 575, "pick": "Atlanta Hawks" }
         },
         "fanduel": {
           "spread": { "favorite": "Atlanta Hawks", "points": 13.5, "odds": -110, "pick": "Atlanta Hawks" },
-          "total": { "value": 230.5, "overOdds": -110, "underOdds": -110, "pick": "UNDER" },
-          "moneyline": { "home": -850, "away": 590, "pick": "Brooklyn Nets" }
+          "total": { "value": 230.5, "overOdds": -110, "underOdds": -110, "pick": "OVER" },
+          "moneyline": { "home": -850, "away": 590, "pick": "Atlanta Hawks" }
         }
       }
     },
