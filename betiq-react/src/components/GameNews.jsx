@@ -71,7 +71,6 @@ const GameNews = ({ homeTeam, awayTeam }) => {
       const response = await axios.get(`${apiBaseUrl}/api/news`, {
         params: {
           q: searchQuery,
-          sortBy: 'relevance',
           language: 'en',
           pageSize: 10 // Limit to 10 articles
         },
