@@ -8,6 +8,7 @@ import LoginPage from "../pages/LoginPage";
 import CreateAccountPage from "../pages/CreateAccount";
 import ActiveGames from "../pages/ActiveGames";
 import NewsPage from "../pages/NewsPage";
+import ModelPerf from "../pages/ModelPerf";
 
 function PrivateRoute({ children }) {
   return children; // Always render the children components without authentication
@@ -30,6 +31,7 @@ export default function AppRouter() {
       <Route path="/today/:gameId" element={<TodaysDetailsPage />} />
       <Route path="/risk" element={<RiskIQPage />} />
       <Route path="/news" element={<NewsPage />} />
+      <Route path="/model-perf" element={<ModelPerf />} />
     </Routes>
   );
 }
