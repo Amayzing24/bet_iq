@@ -2,6 +2,7 @@ import express from 'express'
 import { join } from 'path'
 import axios from 'axios'
 import cors from 'cors'
+import * as stringSimilarity from 'string-similarity'
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -13,57 +14,181 @@ app.use(express.static(join(process.cwd(), 'dist')))
 
 // Existing News API endpoint
 app.get('/api/news', async (req, res) => {
-  try {
-    const API_KEY = "19c4ce7a36a47f94c7c56b4c092e405c"
-    
-    const { q, sortBy, language, pageSize } = req.query
+  const GNEWS_API_KEY = "19c4ce7a36a47f94c7c56b4c092e405c";
+  const NEWSAPI_API_KEY = "07d5f93f8803488390bec2bb6bf23b8d"; // Your NewsAPI.org key
+  const NEWSAPI_ENDPOINT = "https://newsapi.org/v2/everything";
+  const GNEWS_ENDPOINT = "https://gnews.io/api/v4/search";
 
-    const today = new Date()
-    const fromDate = new Date()
-    fromDate.setMonth(today.getMonth() - 3) 
-    
-    const response = await axios.get('https://gnews.io/api/v4/search', {
-      params: {
-        q: q || 'NBA basketball', 
-        lang: language || 'en',    
-        max: pageSize || 10,       
+  try {
+    const { q, sortBy, language, pageSize } = req.query;
+
+    let apiResponse;
+    let transformedResponse;
+    const finalArticles = [];
+
+    // Helper function to format date as YYYY-MM-DD for NewsAPI
+    const formatDateForNewsAPI = (date) => date.toISOString().slice(0, 10);
+
+    // --- Logic for Game-Specific News (using NewsAPI.org) ---
+    if (q) {
+      // Attempt to parse team names from q (assuming format "Team1 Team2 basketball")
+      const parts = q.split(' ');
+      let queryForNewsAPI = q; // Default to original q if parsing fails
+      if (parts.length >= 3) { // Check if we likely have two names and "basketball"
+        const team1 = parts[0];
+        const team2 = parts[1];
+        // Construct advanced query
+        queryForNewsAPI = `("${team1}" AND "${team2}") AND (preview OR vs OR matchup)`; 
+        console.log(`Constructed advanced NewsAPI query: ${queryForNewsAPI}`);
+      } else {
+        console.log(`Could not parse team names from q: '${q}'. Using original q for NewsAPI.`);
+      }
+      
+      const today = new Date();
+      const fromDate = new Date();
+      fromDate.setDate(today.getDate() - 5); // Last 5 days
+
+      const newsApiParams = {
+        q: queryForNewsAPI,
+        from: formatDateForNewsAPI(fromDate),
+        to: formatDateForNewsAPI(today),
+        sortBy: sortBy || 'publishedAt', // Use 'publishedAt' for recency
+        language: language || 'en',
+        pageSize: parseInt(pageSize) || 10, // NewsAPI uses pageSize
+        apiKey: NEWSAPI_API_KEY
+      };
+
+      console.log("--- NewsAPI.org Request Params ---");
+      console.log(newsApiParams);
+      console.log("---------------------------------");
+
+      apiResponse = await axios.get(NEWSAPI_ENDPOINT, { params: newsApiParams });
+
+      // Transform NewsAPI.org response
+      transformedResponse = {
+        status: 'ok',
+        totalResults: apiResponse.data.totalResults,
+        // Map NewsAPI fields to our standard format
+        articles: apiResponse.data.articles.map(article => ({
+          source: {
+            id: article.source?.id || null,
+            name: article.source?.name || 'NewsAPI.org'
+          },
+          author: article.author,
+          title: article.title,
+          description: article.description,
+          url: article.url,
+          urlToImage: article.urlToImage,
+          publishedAt: article.publishedAt,
+          content: article.content
+        }))
+      };
+
+      console.log("--- Raw NewsAPI.org Article Dates ---");
+      (transformedResponse.articles || []).slice(0, 5).forEach((article, index) => {
+         console.log(`Raw Article ${index + 1} publishedAt: ${article.publishedAt}`);
+      });
+      console.log("------------------------------------");
+
+    } 
+    // --- Logic for General News (using GNews) ---
+    else {
+      const searchQuery = 'NBA basketball'; // Default query for general news
+      const today = new Date();
+      const fromDate = new Date();
+      fromDate.setDate(today.getDate() - 5);
+
+      const gnewsParams = {
+        q: searchQuery,
+        lang: language || 'en',
+        max: parseInt(pageSize) || 10, // GNews uses max
         from: fromDate.toISOString(),
         to: today.toISOString(),
         sortby: sortBy || 'publishedAt',
-        apikey: API_KEY
-      }
-    })
-    
-    const transformedResponse = {
-      status: 'ok',
-      totalResults: response.data.totalArticles,
-      articles: response.data.articles.map(article => ({
-        source: { 
-          id: null, 
-          name: article.source?.name || 'GNews' 
-        },
-        author: article.source?.name,
-        title: article.title,
-        description: article.description,
-        url: article.url,
-        urlToImage: article.image,
-        publishedAt: article.publishedAt,
-        content: article.content
-      }))
+        apikey: GNEWS_API_KEY
+      };
+
+      console.log("--- GNews API Request Params ---");
+      console.log(gnewsParams);
+      console.log("------------------------------");
+
+      apiResponse = await axios.get(GNEWS_ENDPOINT, { params: gnewsParams });
+
+      // Transform GNews response
+      transformedResponse = {
+        status: 'ok',
+        totalResults: apiResponse.data.totalArticles,
+        // Map GNews fields to our standard format
+        articles: apiResponse.data.articles.map(article => ({
+          source: {
+            id: null,
+            name: article.source?.name || 'GNews'
+          },
+          author: article.source?.name, // GNews puts source name in author sometimes
+          title: article.title,
+          description: article.description,
+          url: article.url,
+          urlToImage: article.image, // GNews uses 'image'
+          publishedAt: article.publishedAt,
+          content: article.content
+        }))
+      };
+      
+      console.log("--- Raw GNews Article Dates ---");
+       (transformedResponse.articles || []).slice(0, 5).forEach((article, index) => {
+         console.log(`Raw Article ${index + 1} publishedAt: ${article.publishedAt}`);
+      });
+      console.log("-----------------------------");
     }
+
+    // --- Deduplication (applied to whichever API was used) ---
+    const uniqueArticles = [];
+    const seenImageUrls = new Set();
+    const SIMILARITY_THRESHOLD = 0.9;
+
+    for (const article of transformedResponse.articles) {
+      if (article.urlToImage && seenImageUrls.has(article.urlToImage)) {
+        continue;
+      }
+      let isTitleSimilar = false;
+      for (const uniqueArticle of uniqueArticles) {
+        const similarity = stringSimilarity.compareTwoStrings(article.title || '', uniqueArticle.title || '');
+        if (similarity >= SIMILARITY_THRESHOLD) {
+          isTitleSimilar = true;
+          break;
+        }
+      }
+      if (!isTitleSimilar) {
+        uniqueArticles.push(article);
+        if (article.urlToImage) {
+          seenImageUrls.add(article.urlToImage);
+        }
+      }
+    }
+
+    // Final response structure
+    const finalResponse = {
+      status: 'ok',
+      totalResults: uniqueArticles.length,
+      articles: uniqueArticles
+    };
     
-    // Send the transformed response back to the client
-    res.json(transformedResponse)
+    console.log("--- Final Response Article Dates ---");
+     (finalResponse.articles || []).slice(0, 5).forEach((article, index) => {
+      console.log(`Final Article ${index + 1} publishedAt: ${article.publishedAt}`);
+    });
+    console.log("----------------------------------");
+
+    res.json(finalResponse);
+
   } catch (error) {
-    console.error('News API proxy error:', error.message)
-    
-    // Send appropriate error response
+    console.error('News API proxy error:', error.response?.data || error.message);
     res.status(error.response?.status || 500).json({
       status: 'error',
       message: error.response?.data?.message || 'Failed to fetch news data'
-    })
+    });
   }
-})
+});
 
 // -----------------------
 // New /api/games endpoint
