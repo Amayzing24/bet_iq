@@ -38,6 +38,9 @@ export default function Header() {
       <Link to="/risk">
         <Button colorScheme="teal" variant="ghost">RiskIQ</Button>
       </Link>
+      <Link to="/model-perf">
+        <Button colorScheme="teal" variant="ghost" ml={4}>Results</Button>
+      </Link>
       <Link to="/news">
         <Button colorScheme="teal" variant="ghost" ml={4}>News</Button>
       </Link>
