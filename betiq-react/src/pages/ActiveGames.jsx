@@ -492,7 +492,7 @@ const ActiveGames = () => {
                       <Badge colorScheme="green" variant="solid" px={2}>LIVE</Badge>
                       <Text color="gray.300" fontSize="sm">{game.quarter}</Text>
                     </>
-                  ) : game.isDone ? (
+                  ) : (game.isDone || (game.homeScore !== null && game.awayScore !== null)) ? (
                     <Text color="gray.300" fontSize="sm">FINAL</Text>
                   ) : (
                     <Text color="gray.300" fontSize="sm">Upcoming</Text>
