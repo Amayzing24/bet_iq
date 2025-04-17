@@ -1,1 +1,513 @@
-[{"id":"0ad952ba90ad3f9319d8ec0c8eede1ac","homeTeam":"Orlando Magic","awayTeam":"Boston Celtics","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Orlando Magic","points":4.5,"odds":-108,"pick":"Orlando Magic"},"total":{"value":208.5,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":154,"away":-185,"pick":"Boston Celtics"}},"fanduel":{"spread":{"favorite":"Orlando Magic","points":5,"odds":-110,"pick":"Orlando Magic"},"total":{"value":209.5,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":168,"away":-200,"pick":"Boston Celtics"}}}},{"id":"9dfae0ca946fecfe33eed88fd6056fd2","homeTeam":"Washington Wizards","awayTeam":"Philadelphia 76ers","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Philadelphia 76ers","points":1,"odds":-112,"pick":"Philadelphia 76ers"},"total":{"value":227.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-120,"away":100,"pick":"Washington Wizards"}},"fanduel":{"spread":{"favorite":"Philadelphia 76ers","points":1,"odds":-112,"pick":"Philadelphia 76ers"},"total":{"value":227.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-118,"away":100,"pick":"Washington Wizards"}}}},{"id":"88ab25bbf01a28d3f999b2c44a9ea52b","homeTeam":"Toronto Raptors","awayTeam":"Charlotte Hornets","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Toronto Raptors","points":9.5,"odds":-112,"pick":"Toronto Raptors"},"total":{"value":217,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":310,"away":-395,"pick":"Charlotte Hornets"}},"fanduel":{"spread":{"favorite":"Toronto Raptors","points":9,"odds":-108,"pick":"Toronto Raptors"},"total":{"value":217,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":330,"away":-420,"pick":"Charlotte Hornets"}}}},{"id":"2f2d69768c491fa3befbaceb2f4da649","homeTeam":"Dallas Mavericks","awayTeam":"Los Angeles Lakers","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Los Angeles Lakers","points":3.5,"odds":-110,"pick":"Los Angeles Lakers"},"total":{"value":227,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":136,"away":-162,"pick":"Los Angeles Lakers"}},"fanduel":{"spread":{"favorite":"Los Angeles Lakers","points":3.5,"odds":-108,"pick":"Los Angeles Lakers"},"total":{"value":227,"overOdds":-108,"underOdds":-112,"pick":"UNDER"},"moneyline":{"home":138,"away":-164,"pick":"Los Angeles Lakers"}}}},{"id":"c27f91e504c093ff0b43e83bccfb9732","homeTeam":"Chicago Bulls","awayTeam":"Miami Heat","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Miami Heat","points":1.5,"odds":-108,"pick":"Miami Heat"},"total":{"value":227,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":105,"away":-125,"pick":"Miami Heat"}},"fanduel":{"spread":{"favorite":"Miami Heat","points":1.5,"odds":-110,"pick":"Miami Heat"},"total":{"value":226.5,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":106,"away":-124,"pick":"Miami Heat"}}}},{"id":"ab9fd4195cdd64ed05f3c2f03d82f570","homeTeam":"Utah Jazz","awayTeam":"Portland Trail Blazers","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Portland Trail Blazers","points":6,"odds":-110,"pick":"Portland Trail Blazers"},"total":{"value":229.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-230,"away":190,"pick":"Utah Jazz"}},"fanduel":{"spread":{"favorite":"Portland Trail Blazers","points":6,"odds":-112,"pick":"Portland Trail Blazers"},"total":{"value":229.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-245,"away":200,"pick":"Utah Jazz"}}}},{"id":"6dd480253123576fa5f109589d71f5a7","homeTeam":"Sacramento Kings","awayTeam":"Denver Nuggets","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Denver Nuggets","points":4,"odds":-108,"pick":"Denver Nuggets"},"total":{"value":234,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":-170,"away":142,"pick":"Sacramento Kings"}},"fanduel":{"spread":{"favorite":"Denver Nuggets","points":4,"odds":-108,"pick":"Denver Nuggets"},"total":{"value":235,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-172,"away":144,"pick":"Sacramento Kings"}}}},{"id":"46fb9a5147ba9f093b79502ffe6c2cf1","homeTeam":"Golden State Warriors","awayTeam":"San Antonio Spurs","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Golden State Warriors","points":15,"odds":-108,"pick":"Golden State Warriors"},"total":{"value":231.5,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":-1100,"away":700,"pick":"Golden State Warriors"}},"fanduel":{"spread":{"favorite":"Golden State Warriors","points":15,"odds":-110,"pick":"Golden State Warriors"},"total":{"value":231.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-1200,"away":750,"pick":"Golden State Warriors"}}}},{"id":"ffce12b85dddb0d0a0c240614c2b37ab","homeTeam":"Phoenix Suns","awayTeam":"Oklahoma City Thunder","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Oklahoma City Thunder","points":10,"odds":-108,"pick":"Oklahoma City Thunder"},"total":{"value":229,"overOdds":-112,"underOdds":-108,"pick":"OVER"},"moneyline":{"home":-455,"away":350,"pick":"Phoenix Suns"}},"fanduel":{"spread":{"favorite":"Oklahoma City Thunder","points":10,"odds":-108,"pick":"Oklahoma City Thunder"},"total":{"value":229,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-430,"away":340,"pick":"Phoenix Suns"}}}},{"id":"903978b1b42e2d4808980f67584b1ec4","homeTeam":"Los Angeles Clippers","awayTeam":"Houston Rockets","isLive":false,"isDone":false,"homeScore":null,"awayScore":null,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Los Angeles Clippers","points":7,"odds":-108,"pick":"Los Angeles Clippers"},"total":{"value":218.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":215,"away":-265,"pick":"Houston Rockets"}},"fanduel":{"spread":{"favorite":"Los Angeles Clippers","points":7.5,"odds":-110,"pick":"Los Angeles Clippers"},"total":{"value":219.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":245,"away":-300,"pick":"Houston Rockets"}}}}]
+[
+    {
+      "id": "0ad952ba90ad3f9319d8ec0c8eede1ac",
+      "homeTeam": "Orlando Magic",
+      "awayTeam": "Boston Celtics",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 96,
+      "awayScore": 76,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Orlando Magic",
+            "points": 4.5,
+            "odds": -108,
+            "pick": "Orlando Magic"
+          },
+          "total": {
+            "value": 208.5,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": 154,
+            "away": -185,
+            "pick": "Boston Celtics"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Orlando Magic",
+            "points": 5,
+            "odds": -110,
+            "pick": "Orlando Magic"
+          },
+          "total": {
+            "value": 209.5,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": 168,
+            "away": -200,
+            "pick": "Boston Celtics"
+          }
+        }
+      }
+    },
+    {
+      "id": "9dfae0ca946fecfe33eed88fd6056fd2",
+      "homeTeam": "Washington Wizards",
+      "awayTeam": "Philadelphia 76ers",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 103,
+      "awayScore": 122,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Philadelphia 76ers",
+            "points": 1,
+            "odds": -112,
+            "pick": "Philadelphia 76ers"
+          },
+          "total": {
+            "value": 227.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -120,
+            "away": 100,
+            "pick": "Washington Wizards"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Philadelphia 76ers",
+            "points": 1,
+            "odds": -112,
+            "pick": "Philadelphia 76ers"
+          },
+          "total": {
+            "value": 227.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -118,
+            "away": 100,
+            "pick": "Washington Wizards"
+          }
+        }
+      }
+    },
+    {
+      "id": "88ab25bbf01a28d3f999b2c44a9ea52b",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "Charlotte Hornets",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 126,
+      "awayScore": 96,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Toronto Raptors",
+            "points": 9.5,
+            "odds": -112,
+            "pick": "Toronto Raptors"
+          },
+          "total": {
+            "value": 217,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 310,
+            "away": -395,
+            "pick": "Charlotte Hornets"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Toronto Raptors",
+            "points": 9,
+            "odds": -108,
+            "pick": "Toronto Raptors"
+          },
+          "total": {
+            "value": 217,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 330,
+            "away": -420,
+            "pick": "Charlotte Hornets"
+          }
+        }
+      }
+    },
+    {
+      "id": "2f2d69768c491fa3befbaceb2f4da649",
+      "homeTeam": "Dallas Mavericks",
+      "awayTeam": "Los Angeles Lakers",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 97,
+      "awayScore": 112,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Los Angeles Lakers",
+            "points": 3.5,
+            "odds": -110,
+            "pick": "Los Angeles Lakers"
+          },
+          "total": {
+            "value": 227,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": 136,
+            "away": -162,
+            "pick": "Los Angeles Lakers"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Los Angeles Lakers",
+            "points": 3.5,
+            "odds": -108,
+            "pick": "Los Angeles Lakers"
+          },
+          "total": {
+            "value": 227,
+            "overOdds": -108,
+            "underOdds": -112,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 138,
+            "away": -164,
+            "pick": "Los Angeles Lakers"
+          }
+        }
+      }
+    },
+    {
+      "id": "c27f91e504c093ff0b43e83bccfb9732",
+      "homeTeam": "Chicago Bulls",
+      "awayTeam": "Miami Heat",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 119,
+      "awayScore": 111,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Miami Heat",
+            "points": 1.5,
+            "odds": -108,
+            "pick": "Miami Heat"
+          },
+          "total": {
+            "value": 227,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 105,
+            "away": -125,
+            "pick": "Miami Heat"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Miami Heat",
+            "points": 1.5,
+            "odds": -110,
+            "pick": "Miami Heat"
+          },
+          "total": {
+            "value": 226.5,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": 106,
+            "away": -124,
+            "pick": "Miami Heat"
+          }
+        }
+      }
+    },
+    {
+      "id": "ab9fd4195cdd64ed05f3c2f03d82f570",
+      "homeTeam": "Utah Jazz",
+      "awayTeam": "Portland Trail Blazers",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 133,
+      "awayScore": 126,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Portland Trail Blazers",
+            "points": 6,
+            "odds": -110,
+            "pick": "Portland Trail Blazers"
+          },
+          "total": {
+            "value": 229.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -230,
+            "away": 190,
+            "pick": "Utah Jazz"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Portland Trail Blazers",
+            "points": 6,
+            "odds": -112,
+            "pick": "Portland Trail Blazers"
+          },
+          "total": {
+            "value": 229.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -245,
+            "away": 200,
+            "pick": "Utah Jazz"
+          }
+        }
+      }
+    },
+    {
+      "id": "6dd480253123576fa5f109589d71f5a7",
+      "homeTeam": "Sacramento Kings",
+      "awayTeam": "Denver Nuggets",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 116,
+      "awayScore": 124,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Denver Nuggets",
+            "points": 4,
+            "odds": -108,
+            "pick": "Denver Nuggets"
+          },
+          "total": {
+            "value": 234,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": -170,
+            "away": 142,
+            "pick": "Sacramento Kings"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Denver Nuggets",
+            "points": 4,
+            "odds": -108,
+            "pick": "Denver Nuggets"
+          },
+          "total": {
+            "value": 235,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -172,
+            "away": 144,
+            "pick": "Sacramento Kings"
+          }
+        }
+      }
+    },
+    {
+      "id": "46fb9a5147ba9f093b79502ffe6c2cf1",
+      "homeTeam": "Golden State Warriors",
+      "awayTeam": "San Antonio Spurs",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 111,
+      "awayScore": 114,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Golden State Warriors",
+            "points": 15,
+            "odds": -108,
+            "pick": "Golden State Warriors"
+          },
+          "total": {
+            "value": 231.5,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": -1100,
+            "away": 700,
+            "pick": "Golden State Warriors"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Golden State Warriors",
+            "points": 15,
+            "odds": -110,
+            "pick": "Golden State Warriors"
+          },
+          "total": {
+            "value": 231.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -1200,
+            "away": 750,
+            "pick": "Golden State Warriors"
+          }
+        }
+      }
+    },
+    {
+      "id": "ffce12b85dddb0d0a0c240614c2b37ab",
+      "homeTeam": "Phoenix Suns",
+      "awayTeam": "Oklahoma City Thunder",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 112,
+      "awayScore": 125,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Oklahoma City Thunder",
+            "points": 10,
+            "odds": -108,
+            "pick": "Oklahoma City Thunder"
+          },
+          "total": {
+            "value": 229,
+            "overOdds": -112,
+            "underOdds": -108,
+            "pick": "OVER"
+          },
+          "moneyline": {
+            "home": -455,
+            "away": 350,
+            "pick": "Phoenix Suns"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Oklahoma City Thunder",
+            "points": 10,
+            "odds": -108,
+            "pick": "Oklahoma City Thunder"
+          },
+          "total": {
+            "value": 229,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": -430,
+            "away": 340,
+            "pick": "Phoenix Suns"
+          }
+        }
+      }
+    },
+    {
+      "id": "903978b1b42e2d4808980f67584b1ec4",
+      "homeTeam": "Los Angeles Clippers",
+      "awayTeam": "Houston Rockets",
+      "isLive": false,
+      "isDone": true,
+      "homeScore": 134,
+      "awayScore": 117,
+      "time": null,
+      "quarter": null,
+      "odds": {
+        "draftkings": {
+          "spread": {
+            "favorite": "Los Angeles Clippers",
+            "points": 7,
+            "odds": -108,
+            "pick": "Los Angeles Clippers"
+          },
+          "total": {
+            "value": 218.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 215,
+            "away": -265,
+            "pick": "Houston Rockets"
+          }
+        },
+        "fanduel": {
+          "spread": {
+            "favorite": "Los Angeles Clippers",
+            "points": 7.5,
+            "odds": -110,
+            "pick": "Los Angeles Clippers"
+          },
+          "total": {
+            "value": 219.5,
+            "overOdds": -110,
+            "underOdds": -110,
+            "pick": "UNDER"
+          },
+          "moneyline": {
+            "home": 245,
+            "away": -300,
+            "pick": "Houston Rockets"
+          }
+        }
+      }
+    }
+  ]
+  

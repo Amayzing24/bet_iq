@@ -1,1 +1,104 @@
-[{"id":"bd807e6a63c25eaf7a43a16336214448","homeTeam":"Chicago Bulls","awayTeam":"Miami Heat","isLive":false,"isDone":true,"homeScore":105,"awayScore":100,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Chicago Bulls","points":1,"odds":-105,"pick":"Chicago Bulls"},"total":{"value":219,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-112,"away":-108,"pick":"Chicago Bulls"}},"fanduel":{"spread":{"favorite":"Chicago Bulls","points":1,"odds":-114,"pick":"Chicago Bulls"},"total":{"value":219.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":-120,"away":102,"pick":"Chicago Bulls"}}}},{"id":"a22635f3bf66e2b73ef464e660fa3f41","homeTeam":"Sacramento Kings","awayTeam":"Dallas Mavericks","isLive":false,"isDone":true,"homeScore":105,"awayScore":100,"time":null,"quarter":null,"odds":{"draftkings":{"spread":{"favorite":"Sacramento Kings","points":4.5,"odds":-110,"pick":"Sacramento Kings"},"total":{"value":215.5,"overOdds":-110,"underOdds":-110,"pick":"UNDER"},"moneyline":{"home":160,"away":-192,"pick":"Dallas Mavericks"}},"fanduel":{"spread":{"favorite":"Sacramento Kings","points":4.5,"odds":-108,"pick":"Sacramento Kings"},"total":{"value":216,"overOdds":-106,"underOdds":-114,"pick":"UNDER"},"moneyline":{"home":164,"away":-196,"pick":"Dallas Mavericks"}}}}]
+[
+    {
+        "id": "bd807e6a63c25eaf7a43a16336214448",
+        "homeTeam": "Chicago Bulls",
+        "awayTeam": "Miami Heat",
+        "isLive": false,
+        "isDone": true,
+        "homeScore": 90,
+        "awayScore": 109,
+        "time": null,
+        "quarter": null,
+        "odds": {
+            "draftkings": {
+                "spread": {
+                    "favorite": "Chicago Bulls",
+                    "points": 1,
+                    "odds": -105,
+                    "pick": "Chicago Bulls"
+                },
+                "total": {
+                    "value": 219,
+                    "overOdds": -110,
+                    "underOdds": -110,
+                    "pick": "UNDER"
+                },
+                "moneyline": {
+                    "home": -112,
+                    "away": -108,
+                    "pick": "Chicago Bulls"
+                }
+            },
+            "fanduel": {
+                "spread": {
+                    "favorite": "Chicago Bulls",
+                    "points": 1,
+                    "odds": -114,
+                    "pick": "Chicago Bulls"
+                },
+                "total": {
+                    "value": 219.5,
+                    "overOdds": -110,
+                    "underOdds": -110,
+                    "pick": "UNDER"
+                },
+                "moneyline": {
+                    "home": -120,
+                    "away": 102,
+                    "pick": "Chicago Bulls"
+                }
+            }
+        }
+    },
+    {
+        "id": "a22635f3bf66e2b73ef464e660fa3f41",
+        "homeTeam": "Sacramento Kings",
+        "awayTeam": "Dallas Mavericks",
+        "isLive": false,
+        "isDone": true,
+        "homeScore": 106,
+        "awayScore": 120,
+        "time": null,
+        "quarter": null,
+        "odds": {
+            "draftkings": {
+                "spread": {
+                    "favorite": "Sacramento Kings",
+                    "points": 4.5,
+                    "odds": -110,
+                    "pick": "Sacramento Kings"
+                },
+                "total": {
+                    "value": 215.5,
+                    "overOdds": -110,
+                    "underOdds": -110,
+                    "pick": "UNDER"
+                },
+                "moneyline": {
+                    "home": 160,
+                    "away": -192,
+                    "pick": "Dallas Mavericks"
+                }
+            },
+            "fanduel": {
+                "spread": {
+                    "favorite": "Sacramento Kings",
+                    "points": 4.5,
+                    "odds": -108,
+                    "pick": "Sacramento Kings"
+                },
+                "total": {
+                    "value": 216,
+                    "overOdds": -106,
+                    "underOdds": -114,
+                    "pick": "UNDER"
+                },
+                "moneyline": {
+                    "home": 164,
+                    "away": -196,
+                    "pick": "Dallas Mavericks"
+                }
+            }
+        }
+    }
+]
